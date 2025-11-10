@@ -1,0 +1,145 @@
+% [Tamaño principal de la fuente del documento, tamaño del papel, con título (crea salto de página)]{Tipo de documento}
+\documentclass[12pt, a4paper, titlepage]{article}
+\usepackage[utf8]{inputenc}
+% Traduce expresiones al español
+\usepackage[spanish]{babel}
+\usepackage{setspace}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\graphicspath{ {./imagenes/} }
+
+% Permite utilizar labeling para listar de forma personalizada
+\usepackage{scrextend}
+% Permite centrar verticalmente m{}
+\usepackage{array}
+
+\title{\LARGE \textbf{Práctica 3 - Primeros módulos Odoo} \\[2ex] \Large Sistemas de Gestión Empresarial}
+\author{\\[20ex]Cristian Fernández}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\doublespacing
+\noindent \\
+\tableofcontents % Índice
+
+\newpage
+
+\section{Introducción}
+\noindent \\El objetivo de esta práctica consiste en \\ \\
+El programa debe seguir estas pautas:\\
+\begin{itemize}
+    \item Crear una clase Cliente con los siguientes atributos (nombre, tiempoEspera).
+    \item Crear una clase Camarero con un método \textit{prepararCafe} que acepte como argumento un objeto Cliente y simule el tiempo que lleva prepararle dicho brebaje.
+    \item Crear varios objetos Cliente (con diferentes nombres y tiempos de espera) y varios objetos Camarero en la clase principal.
+    \item Simular la llegada de los clienes como hilos separados.
+    \item Cada cliente debe intentar pedir un café y esperar el tiempo especificado. Los camarero deben preparar los cafés para los clientes en orden de llegada. 
+    Si un cliente se va antes de que su café esté listo, el camarero debe continuar con el siguiente cliente.
+    \item El programa debe continuar ejecutándose hasta que todos los clientes hayan sido atendidos.
+\end{itemize}
+\newpage
+
+\section{Requisitos funcionales}
+\noindent \\A continuación se listan los requisitos funcionales del sistema:\\
+%\begin{description} sería equivalente pero items en negrita por defecto
+\begin{labeling}{ RF-5:} % el segundo parámetro marca el espaciado entre ítem y texto
+    \item[ \textbf{ RF-1}:] Ver una leyenda de colores que informen del estado de los Hilos.
+    \item[ \textbf{ RF-2}:] Pulsar un botón que inicie la ejecución del programa.
+    \item[ \textbf{ RF-3}:] Mostrar dinámicamente todo el proceso de ejecución.
+\end{labeling}
+\newpage
+
+\section{Requisitos no funcionales}
+\noindent \\A continuación se listan los requisitos NO funcionales del sistema:\\
+\begin{labeling}{ RNF-5:}
+    \item[ \textbf{RNF-1}:] El tiempo de respuesta al pulsar el botón Iniciar no debe superar los 2 segundos.
+    \item[ \textbf{RNF-2}:] La intefaz gráfica de usuario ha de ser fácilmente entendible.
+    \item[ \textbf{RNF-3}:] Cada acción realizada por los hilos debe ser lo suficientemente descriptiva para el usuario.
+    \item[ \textbf{RNF-4}:] La interfaz debe avisar de forma clara que la ejecución de la aplicación ha terminado.
+\end{labeling}
+\newpage
+
+\section{Casos de uso}
+\noindent \\A continuación se muestran los casos de uso mediante la siguiente tabla:\\ \\ \\
+\begin{tabular}{| m{5cm} | m{8cm} |} % | pinta las columnas verticales
+\hline % pinta las filas horizontales
+\textbf{Caso de uso} & \textbf{Descripción} \\
+\hline
+Consultar leyenda colores & El usuario consulta el funcionamiento de los hilos de la aplicación. \\
+\hline
+Iniciar aplicación & El usuario puede iniciar la aplicación pulsando un botón. \\
+\hline
+\end{tabular}
+\newpage
+
+\section{Historias de usuario}
+\noindent \\A continuación se muestran las historias de usuario mediante la siguiente tabla:\\ \\ \\
+\begin{tabular}{| m{2cm} | m{2cm} | m{4cm} | m{4cm} |}
+\hline
+\textbf{ID} & \textbf{Como...} & \textbf{Quiero...} & \textbf{Para...} \\
+\hline
+HU-01 & Usuario & Pulsar un botón & Iniciar la aplicación \\
+\hline
+HU-02 & Usuario & Entender el comportamiento de los hilos & Deducir cómo funciona la concurrencia \\
+\hline
+\end{tabular}
+\newpage
+
+\section{Herramientas de desarrollo}
+\noindent \\
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[width=0.3\textwidth]{intellij.png}
+% \end{figure}
+\noindent \\\textbf{IntelliJ Community Edition} es un IDE gratuito y de código abierto, ideal para el desarrollo en lenguajes JVM y Android.
+Sus características principales incluyen un potente editor de código con autocompletado inteligente y refactorización, soporte para control de versiones, 
+un depurador integrado, y herramientas de pruebas unitarias. Está disponible para todas las plataformas.  \\
+\\Características principales: \\
+\begin{itemize}
+    \item \textbf{Editor de código potente:} Ofrece resaltado de sintaxis, análisis en tiempo real, sugerencias de código, e inspecciones y correcciones rápidas.
+    \item \textbf{Soporte para múltiples lenguajes:} Es compatible con Java, Kotlin, Groovy, Scala, y otros lenguajes JVM.
+    \item \textbf{Integración con control de versiones:} Permite la integración con sistemas como Git, SVN, y Mercurial.
+\end{itemize}
+\newpage
+
+\section{Lenguajes de programación}
+\noindent \\
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[width=0.6\textwidth]{javafx.jpg}
+% \end{figure}
+\noindent \\\textbf{JavaFX} se caracteriza por su capacidad de crear aplicaciones enriquecidas visualmente, integrando multimedia (audio, video) y gráficos vectoriales.
+Permite desarrollar aplicaciones multiplataforma (escritorio, web, móvil, smart TV). Otras características clave son 
+la integración fluida con el ecosistema Java y herramientas como FXML y Scene Builder para un desarrollo más eficiente y colaborativo. \\
+\\Características principales: \\
+\begin{itemize}
+    \item \textbf{Interfaces gráficas de usuario (GUI) enriquecidas:} Permite crear interfaces modernas y atractivas con animaciones, gráficos vectoriales, y elementos personalizables.
+    \item \textbf{Integración multimedia:} Facilita la inclusión de contenido de audio, video y otros medios dentro de las aplicaciones.
+    \item \textbf{Desarrollo declarativo (FXML):} Utiliza FXML, un lenguaje basado en XML, para describir la interfaz de usuario, lo que facilita el trabajo colaborativo entre diseñadores y desarrolladores.
+\end{itemize}
+\newpage
+
+\section{Interfaz de la aplicación}
+\noindent \\A continuación unas capturas de las diferentes vistas de la interfaz.\\
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{captura0.png}
+%     \caption{Vista inicial, muestra comportamiento hilos por código de colores}
+% \end{figure}
+\newpage
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{captura1.png}
+%     \caption{Ejecución del programa}
+% \end{figure}
+% \begin{figure}[hbt!]
+%     \centering
+%     \includegraphics[width=0.8\textwidth]{captura2.png}
+%     \caption{Fin de ejecución del programa}
+% \end{figure}
+
+
+\end{document}
