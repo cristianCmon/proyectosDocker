@@ -29,31 +29,53 @@
 \newpage
 
 \section{Introducción}
-\noindent \\El objetivo de esta práctica consiste en \\ \\
-El programa debe seguir estas pautas:\\
+\noindent \\El objetivo de esta práctica consiste en implantar y configurar los módulos de Odoo indicados en esta misma
+documentación, demostrando su funcionamiento mediante capturas de pantalla. Además, se realizarán las modificaciones sobre
+el modelo y la vista del módulo \textit{Lista de tareas} con las mejoras que se consideren oportunas, documentando todo el proceso
+con capturas. \\
+
+\noindent Se reutilizará el repositorio creado en la práctica anterior, con objeto de tener todo el trabajo bien organizado y disponible
+para una posible visualización en cualquier momento. \\
+
+\noindent La finalidad de la práctica en detalle es la siguiente:
 \begin{itemize}
-    \item Crear una clase Cliente con los siguientes atributos (nombre, tiempoEspera).
-    \item Crear una clase Camarero con un método \textit{prepararCafe} que acepte como argumento un objeto Cliente y simule el tiempo que lleva prepararle dicho brebaje.
-    \item Crear varios objetos Cliente (con diferentes nombres y tiempos de espera) y varios objetos Camarero en la clase principal.
-    \item Simular la llegada de los clienes como hilos separados.
-    \item Cada cliente debe intentar pedir un café y esperar el tiempo especificado. Los camarero deben preparar los cafés para los clientes en orden de llegada. 
-    Si un cliente se va antes de que su café esté listo, el camarero debe continuar con el siguiente cliente.
-    \item El programa debe continuar ejecutándose hasta que todos los clientes hayan sido atendidos.
+    \item \textbf{Implantación de Módulo básico.}
+    \begin{itemize}
+        \item Desarrollar e instalar el módulo \textit{hola mundo} propuesto en el temario.
+    \end{itemize}
+    \item \textbf{Implantación de Primer módulo.}
+    \begin{itemize}
+        \item Desarrollar e instalar el módulo \textit{lista de tareas} propuesto en el temario.
+    \end{itemize}
+    \item \textbf{Modificación de Primer módulo.}
+    \begin{itemize}
+        \item Modificar el módulo \textit{lista de tareas} con las mejoras que se consideren oportunas y documentar dichas mejoras.
+    \end{itemize}
 \end{itemize}
+\noindent \\Cada punto tendrá una explicación breve del proceso de creación y se demostrará su funcionamiento mediante capturas.
+Si fuese necesario también se comentarán los problemas encontrados y las soluciones empleadas.
 \newpage
 
-\section{Requisitos funcionales}
-\noindent \\A continuación se listan los requisitos funcionales del sistema:\\
-%\begin{description} sería equivalente pero items en negrita por defecto
-\begin{labeling}{ RF-5:} % el segundo parámetro marca el espaciado entre ítem y texto
-    \item[ \textbf{ RF-1}:] Ver una leyenda de colores que informen del estado de los Hilos.
-    \item[ \textbf{ RF-2}:] Pulsar un botón que inicie la ejecución del programa.
-    \item[ \textbf{ RF-3}:] Mostrar dinámicamente todo el proceso de ejecución.
-\end{labeling}
+\section{Implantación de módulo básico \textit{hola mundo}}
+\noindent \\Odoo permite la creación de módulos personalizados al gusto del usuario en los que puede extender funcionalidades según se requiera.
+Para demostrarlo crearemos un módulo de ejemplo básico muy sencillo cuya única finalidad será aparecer listado en la lista de módulos de nuestro
+contenedor Odoo. El propósito es que el sistema detecte y muestre correctamente el módulo, lo cual nos permitirá avanzar al siguiente punto.\\
+
+\noindent Asentada la premisa comenzaremos la tarea creando una carpeta dentro de nuestro proyecto llamada \textit{Ejemplo01-HolaMundo}, en el interior
+del directorio en el que hayamos configurado el alojamiento de nuestros módulos personalizados (en mi caso la carpeta \textit{addons}).\\
+
+\noindent La carpeta recién creada contendrá los siguientes ficheros:
+\begin{itemize}
+    % Es necesario escapar los guiones bajos para que no se produzcan errores
+    \item \textbf{Fichero \textit{\_\_init\_\_.py}:} Este fichero estará vacío. 
+    \item \textbf{Fichero \textit{\_\_manifest\_\_.py}:} Este fichero contendrá una línea de código mostrada en próximas capturas.
+\end{itemize}
+
+
 \newpage
 
-\section{Requisitos no funcionales}
-\noindent \\A continuación se listan los requisitos NO funcionales del sistema:\\
+\section{Implantación de primer módulo \textit{lista de tareas}}
+\noindent \\Odoo permite la creación de módulos personalizados al gusto del usuario en los que puede extender funcionalidades según se requiera.\\
 \begin{labeling}{ RNF-5:}
     \item[ \textbf{RNF-1}:] El tiempo de respuesta al pulsar el botón Iniciar no debe superar los 2 segundos.
     \item[ \textbf{RNF-2}:] La intefaz gráfica de usuario ha de ser fácilmente entendible.
@@ -62,7 +84,7 @@ El programa debe seguir estas pautas:\\
 \end{labeling}
 \newpage
 
-\section{Casos de uso}
+\section{Modificación del primer módulo \textit{lista de tareas}}
 \noindent \\A continuación se muestran los casos de uso mediante la siguiente tabla:\\ \\ \\
 \begin{tabular}{| m{5cm} | m{8cm} |} % | pinta las columnas verticales
 \hline % pinta las filas horizontales
