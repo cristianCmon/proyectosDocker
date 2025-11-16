@@ -8,12 +8,14 @@
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
-\graphicspath{ {./imagenes/} }
+\graphicspath{ {./capturas/} }
 
 % Permite utilizar labeling para listar de forma personalizada
 \usepackage{scrextend}
 % Permite centrar verticalmente m{}
 \usepackage{array}
+% Permite colorear texto
+\usepackage{xcolor}
 
 \title{\LARGE \textbf{Práctica 3 - Primeros módulos Odoo} \\[2ex] \Large Sistemas de Gestión Empresarial}
 \author{\\[20ex]Cristian Fernández}
@@ -68,100 +70,177 @@ del directorio en el que hayamos configurado el alojamiento de nuestros módulos
 \begin{itemize}
     % Es necesario escapar los guiones bajos para que no se produzcan errores
     \item \textbf{Fichero \textit{\_\_init\_\_.py}:} Este fichero estará vacío. 
-    \item \textbf{Fichero \textit{\_\_manifest\_\_.py}:} Este fichero contendrá una línea de código mostrada en próximas capturas.
+    \item \textbf{Fichero \textit{\_\_manifest\_\_.py}:} Este fichero contendrá una línea de código (se mostrará en la siguiente captura).
 \end{itemize}
 
+\noindent \\Posteriormente levantaremos nuestros contenedores con docker compose, accederemos a Odoo en el navegador y buscaremos el módulo recién creado.\\
 
+\noindent Vamos a ver las capturas de todo el proceso en la siguiente página. 
+\newpage
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_1.png}
+    \caption{Carpeta y archivos creados junto con la línea de código}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_2.png}
+    \caption{Dentro de Odoo pulsamos en \textit{Actualizar lista de aplicaciones}}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_3.png}
+    \caption{Nos saldrá este modal. Pulsamos en \textit{Actualizar}}
+\end{figure}
+\newpage
+
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_4.png}
+    \caption{Eliminamos los filtros y buscamos "hola mundo". Si se visualiza nuestro módulo es que hemos tenido éxito y podemos seguir avanzando 
+    hasta el siguiente punto}
+\end{figure}
+
+\noindent \\Partiendo de la base de que nuestro proyecto está perfectamente configurado gracias a las prácticas anteriores, el único problema con
+el que me he topado es la necesidad de que nuestro Odoo debe estar configurado en modo desarrollador y para ello tenemos que hacer una pequeña configuración previa.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ScreenShot_5.png}
+    \caption{Menú Ajustes - \textit{Activar modo de desarrollador} y pulsar en \textit{Guardar}}
+\end{figure}
 \newpage
 
 \section{Implantación de primer módulo \textit{lista de tareas}}
-\noindent \\Odoo permite la creación de módulos personalizados al gusto del usuario en los que puede extender funcionalidades según se requiera.\\
-\begin{labeling}{ RNF-5:}
-    \item[ \textbf{RNF-1}:] El tiempo de respuesta al pulsar el botón Iniciar no debe superar los 2 segundos.
-    \item[ \textbf{RNF-2}:] La intefaz gráfica de usuario ha de ser fácilmente entendible.
-    \item[ \textbf{RNF-3}:] Cada acción realizada por los hilos debe ser lo suficientemente descriptiva para el usuario.
-    \item[ \textbf{RNF-4}:] La interfaz debe avisar de forma clara que la ejecución de la aplicación ha terminado.
-\end{labeling}
+\noindent \\El siguiente paso consistirá en crear un tipo de módulo fácil de entender: uno que cree nuevos modelos de datos (ficheros maestros) y
+permita que se observen estos modelos a través de un nuevo menú.
+
+\noindent \\Pero antes una reflexión.
+
+\noindent \\Crear la estructura de un nuevo módulo de Odoo puede resultar engorroso y tedioso si se hace con cierta frecuencia (y muy probablemente en el contexto de un 
+desarrollador así sea) por lo que usaremos una funcionalidad que incorpora el propio Odoo llamada \underline{\textbf{scaffold}}, que creará automáticamente toda la
+estructura de un nuevo módulo consiguiendo entre otras cosas aliviar el tedio de tener que hacerlo manualmente y mejorando nuestra calidad de vida como
+desarrolladores (quizás esté exagerando pero ciertamente se agradece). \\
+
+\noindent Desde un terminal accederemos al interior de nuestro contenedor de Odoo con el comando ``\textit{\textbf{docker compose exec} {\color{blue}nombreServicio} \textbf{/bin/bash}}''
+y una vez dentro introducimos el comando ``\textit{\textbf{odoo scaffold} {\color{blue}nombreNuevoModulo /ruta/volumen-addons/}}''.
+
+\noindent \\Deberemos sustituir la parte coloreada en azul por los valores correctos según nuestra configuración, tal como se puede observar en la siguiente captura:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_6.png}
+\end{figure}
+\newpage
+
+\noindent Si todo ha ido bien se deberá crear el módulo con toda su estructura tal que así:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.4\textwidth]{ScreenShot_7.png}
+\end{figure}
+
+\noindent \\Para evitar futuros problemas le daremos permisos de escritura al módulo dentro del contenedor con el comando ``\textit{chmod 777 -R /mnt/extra-addons/{\color{blue}nombreNuevoModulo}}''
+tal como muestra la captura:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ScreenShot_8.png}
+\end{figure}
+\newpage
+
+\noindent Ahora podemos comprobar que Odoo reconoce y muestra el módulo así que, como en el apartado anterior, actualizamos y búscamos el módulo nuevo:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_10.png}
+\end{figure}
+
+\noindent \\Y justo aquí nos topamos con el primer problema ya que, si pulsamos en \textit{Activar} nos encontraremos con el siguiente error:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_11.png}
+\end{figure}
+\newpage
+
+\noindent Por su forma de funcionar intermanente Odoo necesita reiniciar el servicio y actualizar el módulo para que se actualicen los cambios realizados en el mismo,
+así que vamos a arreglar el error anterior \underline{\textbf{descomentando todo el código que contengan los archivos}} y modificando el \textbf{\textit{\_\_manifest\_\_.py}},
+reiniciando el servicio y activando/actualizando el contenedor.\\
+
+\noindent \textbf{\textit{\_\_manifest\_\_.py}} quedaría tal que así:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.95\textwidth]{ScreenShot_9.png}
+    \caption{Cambiamos nombre y descomentamos la línea del csv}
+\end{figure}
+\newpage
+
+\noindent Y, desde un terminal, con docker compose reiniciaremos el contenedor con el comando ``\textit{\textbf{docker compose restart} {\color{blue}nombreServicio}}''
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_12.png}
+\end{figure}
+
+\noindent \\Si volvemos a intentar activar el contenedor esta vez sí procederá correctamente y nos mostrará este resultado:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{ScreenShot_13.png}
+\end{figure}
+
+\noindent \\También nos dejará actualizar el módulo.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{ScreenShot_14.png}
+\end{figure}
 \newpage
 
 \section{Modificación del primer módulo \textit{lista de tareas}}
-\noindent \\A continuación se muestran los casos de uso mediante la siguiente tabla:\\ \\ \\
-\begin{tabular}{| m{5cm} | m{8cm} |} % | pinta las columnas verticales
-\hline % pinta las filas horizontales
-\textbf{Caso de uso} & \textbf{Descripción} \\
-\hline
-Consultar leyenda colores & El usuario consulta el funcionamiento de los hilos de la aplicación. \\
-\hline
-Iniciar aplicación & El usuario puede iniciar la aplicación pulsando un botón. \\
-\hline
-\end{tabular}
+\noindent \\Vamos a modificar nuestro módulo de forma liviana para comprobar si se actualiza correctamente. Básicamente crearemos unos cuantos campos en el modelo 
+que sean descriptivos y los añadiremos a la vista para poder visualizarlos correctamente desde Odoo. \\
+Las siguientes capturas mostrarán la creación de una nueva tarea desde nuestro módulo en la que se visualizará claramente el proceso de creación y el resultado y,
+posteriormente, mostraré unas capturas con las modificaciones que he hecho en el código. \\ \\
+Desde la vista principal del módulo clicamos en el botón \textit{New}.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ScreenShot_15.png}
+    \caption{Ejemplo de una tarea nueva}
+\end{figure}
 \newpage
 
-\section{Historias de usuario}
-\noindent \\A continuación se muestran las historias de usuario mediante la siguiente tabla:\\ \\ \\
-\begin{tabular}{| m{2cm} | m{2cm} | m{4cm} | m{4cm} |}
-\hline
-\textbf{ID} & \textbf{Como...} & \textbf{Quiero...} & \textbf{Para...} \\
-\hline
-HU-01 & Usuario & Pulsar un botón & Iniciar la aplicación \\
-\hline
-HU-02 & Usuario & Entender el comportamiento de los hilos & Deducir cómo funciona la concurrencia \\
-\hline
-\end{tabular}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ScreenShot_16.png}
+    \caption{Una vez creada podremos visualizarla en la vista principal}
+\end{figure}
+\indent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{ScreenShot_17.png}
+    \caption{Si hacemos clic en ella podremos visualizarla con más detalle}
+\end{figure}
+\noindent \\ \\Cuando todo está configurado y preparado resulta muy simple utilizar el módulo. Al final comentaré una problemática muy incómoda que me he encontrado.\\
+\\Pero antes las capturas del código en la siguiente página:
 \newpage
 
-\section{Herramientas de desarrollo}
 \noindent \\
-% \begin{figure}[hbt!]
-%     \centering
-%     \includegraphics[width=0.3\textwidth]{intellij.png}
-% \end{figure}
-\noindent \\\textbf{IntelliJ Community Edition} es un IDE gratuito y de código abierto, ideal para el desarrollo en lenguajes JVM y Android.
-Sus características principales incluyen un potente editor de código con autocompletado inteligente y refactorización, soporte para control de versiones, 
-un depurador integrado, y herramientas de pruebas unitarias. Está disponible para todas las plataformas.  \\
-\\Características principales: \\
-\begin{itemize}
-    \item \textbf{Editor de código potente:} Ofrece resaltado de sintaxis, análisis en tiempo real, sugerencias de código, e inspecciones y correcciones rápidas.
-    \item \textbf{Soporte para múltiples lenguajes:} Es compatible con Java, Kotlin, Groovy, Scala, y otros lenguajes JVM.
-    \item \textbf{Integración con control de versiones:} Permite la integración con sistemas como Git, SVN, y Mercurial.
-\end{itemize}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics{ScreenShot_18.png}
+    \caption{Captura del modelo}
+\end{figure}
 \newpage
 
-\section{Lenguajes de programación}
-\noindent \\
-% \begin{figure}[hbt!]
-%     \centering
-%     \includegraphics[width=0.6\textwidth]{javafx.jpg}
-% \end{figure}
-\noindent \\\textbf{JavaFX} se caracteriza por su capacidad de crear aplicaciones enriquecidas visualmente, integrando multimedia (audio, video) y gráficos vectoriales.
-Permite desarrollar aplicaciones multiplataforma (escritorio, web, móvil, smart TV). Otras características clave son 
-la integración fluida con el ecosistema Java y herramientas como FXML y Scene Builder para un desarrollo más eficiente y colaborativo. \\
-\\Características principales: \\
-\begin{itemize}
-    \item \textbf{Interfaces gráficas de usuario (GUI) enriquecidas:} Permite crear interfaces modernas y atractivas con animaciones, gráficos vectoriales, y elementos personalizables.
-    \item \textbf{Integración multimedia:} Facilita la inclusión de contenido de audio, video y otros medios dentro de las aplicaciones.
-    \item \textbf{Desarrollo declarativo (FXML):} Utiliza FXML, un lenguaje basado en XML, para describir la interfaz de usuario, lo que facilita el trabajo colaborativo entre diseñadores y desarrolladores.
-\end{itemize}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_19.png}
+    \caption{Captura de la vista}
+\end{figure}
 \newpage
 
-\section{Interfaz de la aplicación}
-\noindent \\A continuación unas capturas de las diferentes vistas de la interfaz.\\
-% \begin{figure}[hbt!]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{captura0.png}
-%     \caption{Vista inicial, muestra comportamiento hilos por código de colores}
-% \end{figure}
+\noindent \\En esta ocasión me he topado con el problema más tedioso y farragoso de la práctica. Y es que Odoo da muchos problemas a la hora de actualizar los módulos.
+En primer lugar, el modo desarrollador no se queda habilitado entre sesiones por lo que hay que activarlo manualmente cada vez que levantemos el contenedor o iniciemos sesión.\\
+\\Por si fuera poco entre accesos al módulo puede deshabilitarse el modo desarrollador sin venir a cuento teniendo que volver a activarlo manualmente lo cual es muy molesto.\\ \\
+La solución que empleé para trabajar con comodidad ha sido, una vez se activa el modo desarrollador, convertirse en superusuario tal como se ve a continuación.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{ScreenShot_20.png}
+\end{figure}
 \newpage
-% \begin{figure}[hbt!]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{captura1.png}
-%     \caption{Ejecución del programa}
-% \end{figure}
-% \begin{figure}[hbt!]
-%     \centering
-%     \includegraphics[width=0.8\textwidth]{captura2.png}
-%     \caption{Fin de ejecución del programa}
-% \end{figure}
-
 
 \end{document}
