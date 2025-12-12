@@ -8,7 +8,7 @@
         <field name="res_model">biblioteca.comic</field>
         <!-- Indicamos que los comics pueden verse en tree para el listado,
             y en form para la creación/edición -->
-        <field name="view_mode">tree,form</field>
+        <field name="view_mode">list,form</field>
     </record>
 
     <!-- Simple menu item, sin más utilidad que la didáctica -->
