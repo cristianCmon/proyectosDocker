@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.15)  13 DEC 2025 23:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.15)  14 DEC 2025 16:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -279,7 +279,22 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
 [5]
 
-[6] (practica4.aux
+[6]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 120.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 120.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 120.
+
+
+[7]
+
+[8]
+
+[9]
+
+[10] (practica4.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -289,17 +304,17 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4843 strings out of 468130
- 83365 string characters out of 5428212
- 535136 words of memory out of 5000000
- 33431 multiletter control sequences out of 15000+600000
- 629902 words of font info for 50 fonts, out of 8000000 for 9000
+ 4865 strings out of 468130
+ 83611 string characters out of 5428212
+ 536138 words of memory out of 5000000
+ 33446 multiletter control sequences out of 15000+600000
+ 632677 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,369b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on practica4.pdf (7 pages, 66026 bytes).
+ <C:\Users\Abueloncho\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on practica4.pdf (11 pages, 82127 bytes).
 PDF statistics:
- 46 PDF objects out of 1000 (max. 8388607)
+ 68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -55,7 +55,7 @@ Si fuese necesario también se comentarán los problemas encontrados y las soluc
 \newpage
 
 \section{Actividad 01 - Lista de tareas}
-\noindent \\En esta primera actividad modificaremos el ejemplo de la práctica anterior \textit{``módulo Lista de tareas''} para que:\\
+\noindent \\En esta primera actividad modificaremos el módulo de la práctica anterior \textbf{`lista\_tareas'} para que:\\
 \begin{itemize}
     \item Tenga una nueva vista para ver las tareas en formato \textbf{Kanban}.
     \item Modificar las tareas para que tengan una fecha asignada (implementado en la práctica anterior) y 
@@ -68,16 +68,96 @@ autoexplicativas para una correcta comprensión del mismo
 autoexplicativas para una correcta comprensión del mismo
 \newpage
 
+\noindent Actividad 01...
+\newpage
+
 \section{Actividad 02 - Biblioteca de cómics}
-\noindent \\En esta segunda actividad...
+\noindent \\En esta segunda actividad ampliaremos el módulo de prueba \textbf{`EJ03-ComicsSimple'} con objeto de:
+\begin{itemize}
+    \item Incluir la posibilidad de gestionar socios, almacenando su nombre, apellido e identificador.
+    \item Introducir al opción de que existan ejemplares de cómics para préstamo.
+    \begin{itemize}
+        \item El modelo actual de cómic servirá como referencia de la información del cómic.
+        \item Se creará un nuevo modelo para gestionar los ejemplares prestables de cada cómic.
+    \end{itemize}
+    \item Estos ejemplares de préstamo deben registrar:
+    \begin{itemize}
+        \item A quién están prestados (socio).
+        \item La fecha de inicio y fecha de fin del préstamo.
+        \item No es necesario mantener un histórico de préstamos, sólo quién tiene el cómic actualmente, cuándo se prestó
+        y la fecha prevista de devolución.
+    \end{itemize}
+    \item Restricciones:
+    \begin{itemize}
+        \item La fecha de préstamo no puede ser posterior al día actual.
+        \item La fecha prevista de devolución no puede ser anterior al día actual.
+    \end{itemize}
+\end{itemize}
+\noindent \\A continuación se mostrarán las capturas del código realizado y las capturas con el módulo en funcionamiento.
+\newpage
+
+\noindent Actividad 02...
 \newpage
 
 \section{Actividad 03 - Hospital}
-\noindent \\En esta tercera actividad...
+\noindent \\En esta tercera actividad crearemos un módulo de cero para gestionar los pacientes y médicos de un hospital:
+\begin{itemize}
+    \item \textbf{Modelo Paciente}:
+    \begin{itemize}
+        \item Nombre y apellidos del paciente.
+        \item Sintomatología.
+    \end{itemize}
+    \item \textbf{Modelo Médico}:
+    \begin{itemize}
+        \item Nombre y apellidos del médico.
+        \item Número de colegiado.
+    \end{itemize}
+    \item \textbf{Modelo Consulta}:
+    \begin{itemize}
+        \item Registro de cada vez que un médico atiende a un paciente, incluyendo el diagnóstico.
+        \item Relaciones:
+        \begin{itemize}
+            \item Un paciente puede haber sido atendido por varios médicos.
+            \item Un médico puede haber atendido a varios pacientes.
+        \end{itemize}
+    \end{itemize}
+    \item Implementar los modelos y las vistas que se consideren oportunos.
+\end{itemize}
+\noindent \\A continuación se mostrarán las capturas del código realizado y las capturas con el módulo en funcionamiento.
+\newpage
+
+\noindent Actividad 03...
 \newpage
 
 \section{Actividad 04 - Instituto}
-\noindent \\En esta cuarta y última actividad...
+\noindent \\En esta cuarta y última actividad desarrollaremos un módulo que represente los estudios de ciclos formativos en un instituto:
+\begin{itemize}
+    \item \textbf{Modelo Ciclo Formativo}:
+    \begin{itemize}
+        \item Representa un ciclo formativo en el instituto.
+        \item Un ciclo puede tener uno o más módulos asociados.
+    \end{itemize}
+    \item \textbf{Modelo Módulo}, que relacionará con:
+    \begin{itemize}
+        \item El ciclo formativo al que pertenece.
+        \item Los alumnos matriculados.
+        \item El profesor que lo imparte.
+    \end{itemize}
+    \item \textbf{Modelo Alumno}:
+    \begin{itemize}
+        \item Relacionado con los módulos en los que está matriculado.
+    \end{itemize}
+    \item \textbf{Modelo Profesor}:
+    \begin{itemize}
+        \item Relacionado con los módulos que imparte.
+    \end{itemize}
+    \item Se deberán implementar las relaciones necesarias y las vistas adecuadas para los cuatro modelos.
+    \item Por último, se creará el rol de usuario \textit{Director} (todos los permisos) y el rol \textit{Profesor} (permiso de sólo lectura).
+\end{itemize}
+\noindent \\A continuación se mostrarán las capturas del código realizado y las capturas con el módulo en funcionamiento.
+\newpage
+
+\noindent Actividad 04...
 \newpage
 % \section{Implantación de módulo básico \textit{hola mundo}}
 % \noindent \\Odoo permite la creación de módulos personalizados al gusto del usuario en los que puede extender funcionalidades según se requiera.
