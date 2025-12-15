@@ -1,20 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
-    <!-- Definimos como mostramos la vista en el modelo -->
-    <record id='biblioteca_comic_action' model='ir.actions.act_window'>
-        <field name="name">Biblioteca de Comics</field>
-        <!-- Indicamos a que modelo aplica -->
-        <field name="res_model">biblioteca.comic</field>
-        <!-- Indicamos que los comics pueden verse en tree para el listado,
-            y en form para la creación/edición -->
-        <field name="view_mode">list,form</field>
-    </record>
-
-    <!-- Simple menu item, sin más utilidad que la didáctica -->
-    <menuitem name="Mi biblioteca (Simple)" id="biblioteca_base_menu" />
-    <menuitem name="Comics" id="biblioteca_comic_menu" parent="biblioteca_base_menu" action="biblioteca_comic_action"/>
-
     <!-- Definición de la Vista formulario -->
     <record id="biblioteca_comic_view_form" model="ir.ui.view">
         <field name="name">Formulario de Comic de la biblioteca</field>
@@ -43,9 +29,9 @@
                         <field name="precio"/>
                         <field name="fecha_publicacion"/>
                         <!-- con widget="image" class="oe_avatar" preparamos el aspecto de como se verá este campo 
-                            NOTA: en este ejemplo, el modelo lo guarda como fichero (field.Binary) y así forzamos a que parezca una imagen
-                            pero a partir de Odoo 13, se puede usar field.Image, que entre otras ventajas
-                            incluye recorte de imagen subida
+                            NOTA: en este ejemplo, el modelo lo guarda como fichero (field.Binary) y así forzamos 
+                            a que parezca una imagen pero a partir de Odoo 13, se puede usar field.Image, 
+                            que entre otras ventajas incluye recorte de imagen subida
                         --> 
                         <field name="portada" widget="image" class="oe_avatar"/>
                         <field name="valoracion_lector"/>
@@ -86,4 +72,63 @@
         </field>
     </record>
 
+    <!-- Definición de la vista Socios -->
+    <record id="biblioteca_socios_view" model="ir.ui.view">
+        <field name="name">Socios de la biblioteca</field>
+        <field name="model">socio.biblioteca</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="nombre"/>
+                <field name="apellidos"/>                        
+                <field name="id_socio"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Definición de la vista Prestamos -->
+    <record id="biblioteca_prestamos_view" model="ir.ui.view">
+        <field name="name">Ejemplares prestables</field>
+        <field name="model">ejemplar.prestamo</field>
+        <field name="arch" type="xml">
+            <list>
+                <field name="comic_id"/>
+                <field name="socio_id"/>                        
+                <field name="fecha_inicio"/>
+                <field name="fecha_fin"/>
+            </list>
+        </field>
+    </record>
+
+    <!-- Definimos como mostramos la vista en el modelo -->
+    <record id='biblioteca_comic_action' model='ir.actions.act_window'>
+        <field name="name">Biblioteca de Comics</field>
+        <!-- Indicamos a que modelo aplica -->
+        <field name="res_model">biblioteca.comic</field>
+        <!-- Indicamos que los comics pueden verse en tree para el listado,
+            y en form para la creación/edición -->
+        <field name="view_mode">list,form</field>
+    </record>
+
+    <!-- Accionador vista Socios -->
+    <record id="biblioteca_socios_action" model="ir.actions.act_window">
+        <field name="name">Socios</field>
+        <field name="res_model">socio.biblioteca</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="biblioteca_socios_view"/>
+    </record>
+
+    <!-- Accionador vista Prestamos -->
+    <record id="biblioteca_prestamos_action" model="ir.actions.act_window">
+        <field name="name">Prestamos</field>
+        <field name="res_model">ejemplar.prestamo</field>
+        <field name="view_mode">list,form</field>
+        <field name="view_id" ref="biblioteca_prestamos_view"/>
+    </record>
+
+    
+    <!-- Simple menu item, sin más utilidad que la didáctica -->
+    <menuitem name="Mi biblioteca (Simple)" id="biblioteca_base_menu" />
+    <menuitem name="Comics" id="biblioteca_comic_menu" parent="biblioteca_base_menu" action="biblioteca_comic_action"/>
+    <menuitem name="Socios" id="biblioteca_socios_menu" parent="biblioteca_base_menu" action="biblioteca_socios_action"/>
+    <menuitem name="Prestamos" id="biblioteca_prestamos_menu" parent="biblioteca_base_menu" action="biblioteca_prestamos_action"/>
 </odoo>

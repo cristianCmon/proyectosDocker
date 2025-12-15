@@ -1,0 +1,73 @@
+<odoo>
+  <!-- Vista Pacientes -->
+  <record id="hospital_pacientes_view" model="ir.ui.view">
+    <field name="name">Pacientes habituales</field>
+    <field name="model">hospital.paciente</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="nombre"/>
+        <field name="apellidos"/>                        
+        <field name="sintomatologia"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Vista Médicos -->
+  <record id="hospital_medicos_view" model="ir.ui.view">
+    <field name="name">Médicos en plantilla</field>
+    <field name="model">hospital.medico</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="nombre"/>
+        <field name="apellidos"/>                        
+        <field name="numero_colegiado"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Vista Consultas -->
+  <record id="hospital_consultas_view" model="ir.ui.view">
+    <field name="name">Consultas realizadas</field>
+    <field name="model">hospital.consulta</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="paciente_id"/>
+        <field name="medico_id"/>                        
+        <field name="diagnostico"/>
+        <field name="fecha_atencion"/>
+      </list>
+    </field>
+  </record>
+
+
+  <!-- Accionador vista Pacientes -->
+  <record id='hospital_pacientes_action' model='ir.actions.act_window'>
+    <field name="name">Pacientes</field>
+    <field name="res_model">hospital.paciente</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="hospital_pacientes_view"/>
+  </record>
+
+  <!-- Accionador vista Médicos -->
+  <record id="hospital_medicos_action" model="ir.actions.act_window">
+    <field name="name">Médicos</field>
+    <field name="res_model">hospital.medico</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="hospital_medicos_view"/>
+  </record>
+
+  <!-- Accionador vista Consultas -->
+  <record id="hospital_consultas_action" model="ir.actions.act_window">
+    <field name="name">Consultas</field>
+    <field name="res_model">hospital.consulta</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="hospital_consultas_view"/>
+  </record>
+
+
+  <!-- MENÚES -->
+  <menuitem name="Hospital" id="hospital_base_menu"/>
+  <menuitem name="Pacientes" id="hospital_pacientes_menu" parent="hospital_base_menu" action="hospital_pacientes_action"/>
+  <menuitem name="Médicos" id="hospital_medicos_menu" parent="hospital_base_menu" action="hospital_medicos_action"/>
+  <menuitem name="Consultas" id="hospital_consultas_menu" parent="hospital_base_menu" action="hospital_consultas_action"/>
+</odoo>

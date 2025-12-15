@@ -90,6 +90,11 @@ class BibliotecaComic(models.Model):
     # https://stackoverflow.com/questions/22927605/what-is-res-partner
     autor_ids = fields.Many2many('res.partner', string='Autores')
 
+
+    # RELACIÓN 1-N (Un cómic tiene muchos ejemplares)
+    ejemplar_ids = fields.One2many('ejemplar.prestamo', 'comic_id', string='Ejemplares Prestables')
+
+
     #Constraints de SQL del modelo
     #Util cuando la constraint se puede definir con sintaxis SQL
     _sql_constraints = [
@@ -110,5 +115,3 @@ class BibliotecaComic(models.Model):
             if record.fecha_publicacion and record.fecha_publicacion > fields.Date.today():
                 #Si procede, lanzamos una excepcion
                 raise models.ValidationError('La fecha de lanzamiento debe ser anterior a la actual')
-
-

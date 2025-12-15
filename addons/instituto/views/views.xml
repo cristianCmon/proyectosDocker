@@ -1,0 +1,90 @@
+<odoo>
+  <!-- Vista Ciclos -->
+  <record id="instituto_ciclos_view" model="ir.ui.view">
+    <field name="name">Ciclos en curso</field>
+    <field name="model">instituto.ciclo</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="nombre"/>
+        <field name="codigo"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Vista Módulos -->
+  <record id="instituto_modulos_view" model="ir.ui.view">
+    <field name="name">Módulos del ciclo</field>
+    <field name="model">instituto.modulo</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="nombre"/>
+        <field name="horas"/>
+        <field name="ciclo_id"/>
+        <field name="profesor_id"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Vista Alumnos -->
+  <record id="instituto_alumnos_view" model="ir.ui.view">
+    <field name="name">Alumnos matriculados</field>
+    <field name="model">instituto.alumno</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="nombre"/>
+        <field name="apellidos"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Vista Profesores -->
+  <record id="instituto_profesores_view" model="ir.ui.view">
+    <field name="name">Profesores del centro</field>
+    <field name="model">instituto.profesor</field>
+    <field name="arch" type="xml">
+      <list>
+        <field name="nombre"/>
+        <field name="apellidos"/>
+      </list>
+    </field>
+  </record>
+
+  <!-- Accionador vista Ciclos -->
+  <record id='instituto_ciclos_action' model='ir.actions.act_window'>
+    <field name="name">Ciclos</field>
+    <field name="res_model">instituto.ciclo</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="instituto_ciclos_view"/>
+  </record>
+
+  <!-- Accionador vista Módulos -->
+  <record id="instituto_modulos_action" model="ir.actions.act_window">
+    <field name="name">Módulos</field>
+    <field name="res_model">instituto.modulo</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="instituto_modulos_view"/>
+  </record>
+
+  <!-- Accionador vista Alumnos -->
+  <record id="instituto_alumnos_action" model="ir.actions.act_window">
+    <field name="name">Alumnos</field>
+    <field name="res_model">instituto.alumno</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="instituto_alumnos_view"/>
+  </record>
+
+  <!-- Accionador vista Profesores -->
+  <record id="instituto_profesores_action" model="ir.actions.act_window">
+    <field name="name">Profesores</field>
+    <field name="res_model">instituto.profesor</field>
+    <field name="view_mode">list,form</field>
+    <field name="view_id" ref="instituto_profesores_view"/>
+  </record>
+
+<!-- MENÚES -->
+  <menuitem name="Instituto" id="instituto_base_menu"/>
+  <menuitem name="Ciclos" id="instituto_ciclos_menu" parent="instituto_base_menu" action="instituto_ciclos_action"/>
+  <menuitem name="Modulos" id="instituto_modulos_menu" parent="instituto_base_menu" action="instituto_modulos_action"/>
+  <menuitem name="Alumnos" id="instituto_alumnos_menu" parent="instituto_base_menu" action="instituto_alumnos_action"/>
+  <menuitem name="Profesores" id="instituto_profesores_menu" parent="instituto_base_menu" action="instituto_profesores_action"/>
+</odoo>

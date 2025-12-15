@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_paciente,hospital.paciente_default,model_hospital_paciente,,1,0,0,0
+access_paciente_gestor,hospital.paciente_gestor,model_hospital_paciente,base.group_user,1,1,1,1
+access_medico,hospital.medico_default,model_hospital_medico,,1,0,0,0
+access_medico_gestor,hospital.medico_gestor,model_hospital_medico,base.group_user,1,1,1,1
+access_consulta,hospital.consulta_default,model_hospital_consulta,,1,0,0,0
+access_consulta_gestor,hospital.consulta_gestor,model_hospital_consulta,base.group_user,1,1,1,1
