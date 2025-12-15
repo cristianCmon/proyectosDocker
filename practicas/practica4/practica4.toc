@@ -1,6 +1,6 @@
 \babel@toc {spanish}{}\relax 
 \contentsline {section}{\numberline {1}Introducción}{2}{}%
 \contentsline {section}{\numberline {2}Actividad 01 - Lista de tareas}{3}{}%
-\contentsline {section}{\numberline {3}Actividad 02 - Biblioteca de cómics}{5}{}%
-\contentsline {section}{\numberline {4}Actividad 03 - Hospital}{7}{}%
-\contentsline {section}{\numberline {5}Actividad 04 - Instituto}{9}{}%
+\contentsline {section}{\numberline {3}Actividad 02 - Biblioteca de cómics}{10}{}%
+\contentsline {section}{\numberline {4}Actividad 03 - Hospital}{12}{}%
+\contentsline {section}{\numberline {5}Actividad 04 - Instituto}{14}{}%

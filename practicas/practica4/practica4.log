@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.15)  14 DEC 2025 16:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.10.15)  15 DEC 2025 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -274,27 +274,93 @@ Underfull \hbox (badness 10000) in paragraph at lines 58--59
 
 
 [3]
+<./capturas/ScreenShot_1.png, id=18, 562.35094pt x 661.72218pt>
+File: ./capturas/ScreenShot_1.png Graphic file (type png)
+<use ./capturas/ScreenShot_1.png>
+Package pdftex.def Info: ./capturas/ScreenShot_1.png  used on input line 72.
+(pdftex.def)             Requested size: 409.71692pt x 482.11415pt.
 
-[4]
 
-[5]
+[4 <./capturas/ScreenShot_1.png>]
+<./capturas/ScreenShot_2.png, id=24, 493.845pt x 491.58656pt>
+File: ./capturas/ScreenShot_2.png Graphic file (type png)
+<use ./capturas/ScreenShot_2.png>
+Package pdftex.def Info: ./capturas/ScreenShot_2.png  used on input line 79.
+(pdftex.def)             Requested size: 409.71692pt x 407.83672pt.
 
-[6]
+
+[5 <./capturas/ScreenShot_2.png>]
+<./capturas/ScreenShot_3.png, id=29, 508.90125pt x 418.56375pt>
+File: ./capturas/ScreenShot_3.png Graphic file (type png)
+<use ./capturas/ScreenShot_3.png>
+Package pdftex.def Info: ./capturas/ScreenShot_3.png  used on input line 87.
+(pdftex.def)             Requested size: 409.71692pt x 336.99739pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--90
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 91--93
+
+ []
+
+
+
+[6 <./capturas/ScreenShot_3.png>]
+<./capturas/ScreenShot_4.png, id=35, 717.43031pt x 361.35pt>
+File: ./capturas/ScreenShot_4.png Graphic file (type png)
+<use ./capturas/ScreenShot_4.png>
+Package pdftex.def Info: ./capturas/ScreenShot_4.png  used on input line 99.
+(pdftex.def)             Requested size: 455.24411pt x 229.30031pt.
+<./capturas/ScreenShot_5.png, id=36, 713.66624pt x 363.60844pt>
+File: ./capturas/ScreenShot_5.png Graphic file (type png)
+<use ./capturas/ScreenShot_5.png>
+Package pdftex.def Info: ./capturas/ScreenShot_5.png  used on input line 105.
+(pdftex.def)             Requested size: 455.24411pt x 231.94295pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 102--108
+
+ []
+
+
+
+[7 <./capturas/ScreenShot_4.png> <./capturas/ScreenShot_5.png>]
+<./capturas/ScreenShot_6.png, id=42, 719.68875pt x 697.8572pt>
+File: ./capturas/ScreenShot_6.png Graphic file (type png)
+<use ./capturas/ScreenShot_6.png>
+Package pdftex.def Info: ./capturas/ScreenShot_6.png  used on input line 112.
+(pdftex.def)             Requested size: 455.24411pt x 441.45193pt.
+
+
+[8 <./capturas/ScreenShot_6.png>]
+<./capturas/ScreenShot_7.png, id=47, 714.41907pt x 687.31781pt>
+File: ./capturas/ScreenShot_7.png Graphic file (type png)
+<use ./capturas/ScreenShot_7.png>
+Package pdftex.def Info: ./capturas/ScreenShot_7.png  used on input line 119.
+(pdftex.def)             Requested size: 455.24411pt x 437.97314pt.
+
+
+[9 <./capturas/ScreenShot_7.png>]
+
+[10]
+
+[11]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 120.
+(Font)              <12> on input line 170.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 120.
+(Font)              <8> on input line 170.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 120.
+(Font)              <6> on input line 170.
 
 
-[7]
+[12]
 
-[8]
+[13]
 
-[9]
+[14]
 
-[10] (practica4.aux
+[15] (practica4.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -304,17 +370,17 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 4865 strings out of 468130
- 83611 string characters out of 5428212
+ 4931 strings out of 468130
+ 85642 string characters out of 5428212
  536138 words of memory out of 5000000
- 33446 multiletter control sequences out of 15000+600000
+ 33512 multiletter control sequences out of 15000+600000
  632677 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,369b,365s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Abueloncho\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on practica4.pdf (11 pages, 82127 bytes).
+Output written on practica4.pdf (16 pages, 289069 bytes).
 PDF statistics:
- 68 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 36 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1765724966.58981 "c:/Users/Abueloncho/Documents/proyectos/code/proyectosDocker/practicas/practica4/practica4.tex" "practica4.pdf" "practica4" 1765724967.16901 0
+["pdflatex"] 1765801881.94605 "c:/Users/Abueloncho/Documents/proyectos/code/proyectosDocker/practicas/practica4/practica4.tex" "practica4.pdf" "practica4" 1765801882.91256 0
   "C:/Users/Abueloncho/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1763550041 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/Abueloncho/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1760564629 14064 52effdfa20ce61acbf47b4d62d7b2ba1 ""
   "C:/Users/Abueloncho/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1760524108 13289387 2a4c3bb278b012b59493e6baf91a73ba ""
@@ -56,10 +56,17 @@
   "C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1749468414 15698 f5f20b24886bb50156054c53e19b13fd ""
   "C:/Users/Abueloncho/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/Abueloncho/Documents/proyectos/code/proyectosDocker/practicas/practica4/practica4.tex" 1765724966 17039 653b4425d679ed12c601056282be28fe ""
-  "practica4.aux" 1765724967 835 62847da131de4423744dd002e638f214 "pdflatex"
-  "practica4.tex" 1765724966 17039 653b4425d679ed12c601056282be28fe ""
-  "practica4.toc" 1765724967 391 bbdaa20b53dc7789cffaa146e4d076db "pdflatex"
+  "c:/Users/Abueloncho/Documents/proyectos/code/proyectosDocker/practicas/practica4/practica4.tex" 1765801880 18472 9f01d4b70c0c3661f91d9c9c779d6cee ""
+  "capturas/ScreenShot_1.png" 1765797934 60984 0b4232c625ae7af485520bc45f9e915d ""
+  "capturas/ScreenShot_2.png" 1765801565 49629 ae6ee32caed678bc10ef1a4b91f85605 ""
+  "capturas/ScreenShot_3.png" 1765798522 38213 b21f7f82998997a47acc58eed6ab729d ""
+  "capturas/ScreenShot_4.png" 1765801831 21566 bff1641bd18a14c1cb00bf338506b501 ""
+  "capturas/ScreenShot_5.png" 1765800805 23755 fb30bc7e4c7169272ffcaefd2cb414cc ""
+  "capturas/ScreenShot_6.png" 1765800871 31851 23c8a15244f9025bbfe03eb931756c26 ""
+  "capturas/ScreenShot_7.png" 1765801347 38883 0c90b9cf9049481cf847b06d8fa0bfb2 ""
+  "practica4.aux" 1765801882 1822 9c199e065d4e3409f36306bd7ce5b879 "pdflatex"
+  "practica4.tex" 1765801880 18472 9f01d4b70c0c3661f91d9c9c779d6cee ""
+  "practica4.toc" 1765801882 394 7c1c55b727c0bdaeba97672d07616264 "pdflatex"
   (generated)
   "practica4.aux"
   "practica4.log"

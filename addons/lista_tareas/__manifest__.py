@@ -24,7 +24,7 @@ Módulo de pruebas de Odoo en el que se listan tareas al más puro estilo agenda
     'data': [
         'security/ir.model.access.csv',
         'views/views.xml',
-        'views/templates.xml',
+        'views/templates.xml'
     ],
     # only loaded in demonstration mode
     'demo': [
