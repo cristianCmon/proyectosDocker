@@ -16,6 +16,7 @@
 \usepackage{array}
 % Permite colorear texto
 \usepackage{xcolor}
+\usepackage[dvipsnames]{xcolor}
 
 \title{\LARGE \textbf{Práctica 5: Módulos Odoo Controlador, Herencia y Web Controllers.} \\[2ex] \Large Sistemas de Gestión Empresarial}
 \author{\\[20ex]Cristian Fernández}
@@ -31,42 +32,81 @@
 \newpage
 
 \section{Introducción}
-\noindent \\El objetivo de esta práctica es aplicar los conocimientos adquiridos en ejercicios anteriores sobre 
-modelos, relaciones y vistas en el desarrollo de aplicaciones. Para ello, nos ocuparemos de la implementación 
-de cuatro actividades que abarcan diferentes contextos, como la gestión de tareas, bibliotecas de cómics, 
-pacientes y médicos, y ciclos formativos. \\
+\noindent \\El objetivo de esta práctica es aplicar los conocimientos adquiridos sobre vistas, wizards, informes y 
+controladores web. Para ello, nos ocuparemos de la implementación de cuatro actividades que abarcan diferentes contextos:
 
-\noindent Habrá que tener en cuenta la revisión de los ejemplos proporcionados en el siguiente repositorio. \textit{https://github.com/sergarb1/OdooModulosEjemplos} \\
-
-\noindent Una vez que verifiquemos y probemos el funcionamiento de cada ejemplo en nuestro contenedor de Odoo debemos:\\
 \begin{itemize}
-    \item Revisar los manifests.
-    \item Revisar los modelos de datos.
-    \item Revisar las vistas.
+    \item \textbf{EJ07-LigaFutbol}\textcolor{RoyalBlue}{\hspace{1em}\textit{4 puntos}}
+    \begin{itemize}
+        \item Se modificará el módulo para que incluya las siguientes funcionalidades:
+        \begin{itemize}
+            \item Reglas de puntuación especiales.\textcolor{Turquoise}{\hspace{1em}\textit{1 punto}}
+            \item Botones para alterar los goles de los partidos.\textcolor{Turquoise}{\hspace{1em}\textit{1 punto}}
+            \item Web controller para eliminar empates.\textcolor{Turquoise}{\hspace{1em}\textit{0,5 punto}}
+            \item Informe PDF por cada partido.\textcolor{Turquoise}{\hspace{1em}\textit{0,5 punto}}
+            \item Wizard para crear nuevos partidos.\textcolor{Turquoise}{\hspace{1em}\textit{0,5 punto}}
+            \item Vista Graph.\textcolor{Turquoise}{\hspace{1em}\textit{0,5 punto}}
+        \end{itemize}
+    \end{itemize}
+    \item \textbf{EJ08-API-REST\_Socios}\textcolor{RoyalBlue}{\hspace{1em}\textit{1,5 puntos}}
+    \begin{itemize}
+        \item Se grabará un vídeo explicativo realizando operaciones CRUD.
+    \end{itemize}
+    \item \textbf{Bot de Telegram}\textcolor{RoyalBlue}{\hspace{1em}\textit{3 puntos}}
+    \begin{itemize}
+        \item Se creará un bot de Telegram que escuchará ordenes enviadas por los usuarios.
+    \end{itemize}
+        \item \textbf{Generación de imágenes aleatorias con Web Controller}\textcolor{RoyalBlue}{\hspace{1em}\textit{1,5 puntos}}
+    \begin{itemize}
+        \item Se creará un \textit{Web Controller} que reciba parámetros, genere una imagen de píxeles aleatorios y la
+        devuelva en Base64 o PNG.
+    \end{itemize}
 \end{itemize}
 
-\noindent \\Entender y probar estos ejemplos nos facilitará la comprensión sobre la arquitectura de Odoo y su sistema de módular
-y, por tanto, la realización la práctica.
-
-\noindent \\Se reutilizará el repositorio creado en las prácticas anteriores, con objeto de tener todo el trabajo bien organizado y disponible
-para una posible visualización en cualquier momento. \\
-\noindent \\Cada actividad tendrá una explicación breve del proceso de creación y se demostrará su funcionamiento mediante capturas.
-Si fuese necesario también se comentarán los problemas encontrados y las soluciones empleadas.
+\noindent \\Los ejemplos citados anteriormente se encuentran en el siguiente repositorio.\\
+\textit{https://github.com/sergarb1/OdooModulosEjemplos} \\
 \newpage
 
-\section{Actividad 01 – Modificación EJ07-LigaFutbol}
+\section{Actividad 01 – Modificación \textit{EJ07-LigaFutbol}}
+\subsection{Reglas de puntuación especiales}
 \noindent \\01
 \newpage
 
-\section{Actividad 02 – Pruebas `EJ08-API-REST\_Socio'}
+\subsection{Botones para alterar los goles de los partidos}
+\noindent \\01
+\newpage
+
+\subsection{Web Controller para eliminar empates}
+\noindent \\01
+\newpage
+
+\subsection{Informe PDF por cada partido}
+\noindent \\01
+\newpage
+
+\subsection{Wizard para crear nuevos partidos}
+\noindent \\01
+\newpage
+
+\subsection{Vista Graph}
+\noindent \\01
+\newpage
+
+\section{Actividad 02 – Pruebas \textit{EJ08-API-REST\_Socio}}
 \noindent \\02
 \newpage
 
 \section{Actividad 03 – Bot Telegram API REST}
+% \subsection{Informe PDF por cada partido}
+% \noindent \\01
+% \newpage
 \noindent \\03
 \newpage
 
 \section{Actividad 04 – Generación imágenes aleatorias Web Controller}
+% \subsection{Informe PDF por cada partido}
+% \noindent \\01
+% \newpage
 \noindent \\04
 \newpage
 
