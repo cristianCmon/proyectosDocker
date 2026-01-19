@@ -1,0 +1,73 @@
+% [Tamaño principal de la fuente del documento, tamaño del papel, con título (crea salto de página)]{Tipo de documento}
+\documentclass[12pt, a4paper, titlepage]{article}
+\usepackage[utf8]{inputenc}
+% Traduce expresiones al español
+\usepackage[spanish]{babel}
+\usepackage{setspace}
+
+\usepackage{graphicx}
+\usepackage{geometry}
+\geometry{margin=2.5cm}
+\graphicspath{ {./capturas/} }
+
+% Permite utilizar labeling para listar de forma personalizada
+\usepackage{scrextend}
+% Permite centrar verticalmente m{}
+\usepackage{array}
+% Permite colorear texto
+\usepackage{xcolor}
+
+\title{\LARGE \textbf{Práctica 5: Módulos Odoo Controlador, Herencia y Web Controllers.} \\[2ex] \Large Sistemas de Gestión Empresarial}
+\author{\\[20ex]Cristian Fernández}
+\date{\today}
+
+\begin{document}
+\maketitle
+
+\doublespacing
+\noindent \\
+\tableofcontents % Índice
+
+\newpage
+
+\section{Introducción}
+\noindent \\El objetivo de esta práctica es aplicar los conocimientos adquiridos en ejercicios anteriores sobre 
+modelos, relaciones y vistas en el desarrollo de aplicaciones. Para ello, nos ocuparemos de la implementación 
+de cuatro actividades que abarcan diferentes contextos, como la gestión de tareas, bibliotecas de cómics, 
+pacientes y médicos, y ciclos formativos. \\
+
+\noindent Habrá que tener en cuenta la revisión de los ejemplos proporcionados en el siguiente repositorio. \textit{https://github.com/sergarb1/OdooModulosEjemplos} \\
+
+\noindent Una vez que verifiquemos y probemos el funcionamiento de cada ejemplo en nuestro contenedor de Odoo debemos:\\
+\begin{itemize}
+    \item Revisar los manifests.
+    \item Revisar los modelos de datos.
+    \item Revisar las vistas.
+\end{itemize}
+
+\noindent \\Entender y probar estos ejemplos nos facilitará la comprensión sobre la arquitectura de Odoo y su sistema de módular
+y, por tanto, la realización la práctica.
+
+\noindent \\Se reutilizará el repositorio creado en las prácticas anteriores, con objeto de tener todo el trabajo bien organizado y disponible
+para una posible visualización en cualquier momento. \\
+\noindent \\Cada actividad tendrá una explicación breve del proceso de creación y se demostrará su funcionamiento mediante capturas.
+Si fuese necesario también se comentarán los problemas encontrados y las soluciones empleadas.
+\newpage
+
+\section{Actividad 01 – Modificación EJ07-LigaFutbol}
+\noindent \\01
+\newpage
+
+\section{Actividad 02 – Pruebas `EJ08-API-REST\_Socio'}
+\noindent \\02
+\newpage
+
+\section{Actividad 03 – Bot Telegram API REST}
+\noindent \\03
+\newpage
+
+\section{Actividad 04 – Generación imágenes aleatorias Web Controller}
+\noindent \\04
+\newpage
+
+\end{document}
