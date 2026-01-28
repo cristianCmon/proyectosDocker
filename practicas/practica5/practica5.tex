@@ -210,7 +210,23 @@ El archivo \textit{Actividad 2.mp4} está ubicado en la carpeta \textit{practica
 % \subsection{Informe PDF por cada partido}
 % \noindent \\01
 % \newpage
-\noindent \\04
+\noindent \\docker exec -u 0 -it d-odoo /bin/bash
+exit
+
+docker exec	Indica a Docker que quieres ejecutar un nuevo proceso dentro de un contenedor 
+que ya está en marcha.
+
+-u 0	Define el usuario con el que vas a entrar. El 0 es el ID del usuario root. 
+Esto te da permisos totales de administrador dentro del contenedor.
+
+-it		Es la combinación de dos banderas:
+
+	-i (interactive): Mantiene el flujo de entrada abierto.
+
+	-t (tty): Asigna una terminal virtual para que se vea y actúe como una consola normal.
+\textless nombre\_o\_id \textgreater	El identificador único del contenedor donde quieres entrar.
+
+/bin/bash	El programa que quieres ejecutar. En este caso, abres la consola Bash. Si el contenedor es muy ligero (como Alpine), podrías necesitar usar /bin/sh en su lugar.
 \newpage
 
 \end{document}

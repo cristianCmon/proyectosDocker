@@ -160,3 +160,24 @@ class LigaPartido(models.Model):
         self.actualizoRegistrosEquipo()
         #hago lo normal del metodo create
         return result
+
+    #NUEVAS FUNCIONES PARA LA BOTONERA DE GOLES
+    def sumar_goles_equipos_locales(self):
+        # BUSCAMOS TODOS LOS PARTIDOS
+        partidos = self.search([])
+
+        for partido in partidos:
+            partido.goles_casa += 2
+
+        # ACTUALIZAMOS CLASIFICACIÓN
+        self.actualizoRegistrosEquipo()
+
+    def sumar_goles_equipos_visitantes(self):
+        # BUSCAMOS TODOS LOS PARTIDOS
+        partidos = self.search([])
+
+        for partido in partidos:
+            partido.goles_fuera += 2
+
+        # ACTUALIZAMOS CLASIFICACIÓN
+        self.actualizoRegistrosEquipo()

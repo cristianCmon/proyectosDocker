@@ -17,6 +17,20 @@
         <field name="model">liga.partido</field>
         <field name="arch" type="xml">
             <form>
+            
+                <header>
+                    <button name="sumar_goles_equipos_locales"
+                        string="+2 goles equipos locales"
+                        type="object"
+                        class="oe_highlight"
+                        confirm="¿Estás seguro de que quieres sumar 2 goles a TODOS los locales?"/>
+                    <button name="sumar_goles_equipos_visitantes"
+                        string="+2 goles equipos visitantes"
+                        type="object"
+                        class="btn-secondary"
+                        confirm="¿Estás seguro de que quieres sumar 2 goles a TODOS los visitantes?"/>
+                </header>
+
                 <group>
                     <group>
                         <field name="equipo_casa" />

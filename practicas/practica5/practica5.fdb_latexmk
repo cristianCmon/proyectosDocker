@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1769625769.7442 "c:/Users/cristianf/Documents/proyectos/code/proyectosDocker/practicas/practica5/practica5.tex" "practica5.pdf" "practica5" 1769625770.94631 0
+["pdflatex"] 1769626531.92372 "c:/Users/cristianf/Documents/proyectos/code/proyectosDocker/practicas/practica5/practica5.tex" "practica5.pdf" "practica5" 1769626533.11354 0
   "C:/Users/cristianf/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1767972991 80909 eab91d9745dd2edfd62a31d53cd5fe15 ""
   "C:/Users/cristianf/AppData/Local/MiKTeX/fonts/pk/ljfour/jknappen/ec/dpi600/tcrm1200.pk" 1758905781 14064 7c8c6e7332d338a8dd3d0d08caffb54e ""
   "C:/Users/cristianf/AppData/Local/MiKTeX/miktex/data/le/pdftex/pdflatex.fmt" 1758905681 13288902 5dadc62f94687a000b7cd10de8fe3373 ""
@@ -61,7 +61,7 @@
   "C:/Users/cristianf/AppData/Local/Programs/MiKTeX/tex/latex/setspace/setspace.sty" 1670403145 22490 8cac309b79a4c53a4ffce4b1b07aead0 ""
   "C:/Users/cristianf/AppData/Local/Programs/MiKTeX/tex/latex/tools/array.sty" 1749468414 15698 f5f20b24886bb50156054c53e19b13fd ""
   "C:/Users/cristianf/AppData/Local/Programs/MiKTeX/tex/latex/xcolor/xcolor.sty" 1729265222 55384 b454dec21c2d9f45ec0b793f0995b992 ""
-  "c:/Users/cristianf/Documents/proyectos/code/proyectosDocker/practicas/practica5/practica5.tex" 1769625769 9367 6892e3ba046a7dcbc902e19819fea441 ""
+  "c:/Users/cristianf/Documents/proyectos/code/proyectosDocker/practicas/practica5/practica5.tex" 1769626531 10150 9416547939ae26d6c58ea24a7241823f ""
   "capturas/01.png" 1769598546 106625 d7642ba38b35b9fe099bc760cc3d45db ""
   "capturas/02.png" 1769601118 9628 64d0373373a428981dd77a9a7e63a6e0 ""
   "capturas/03.png" 1769602071 50803 1bc701bb72b45f77648f14dbe1bb561c ""
@@ -75,9 +75,9 @@
   "capturas/11.png" 1769621257 48930 2b6f342c21565590743095a2beb2c507 ""
   "capturas/12.png" 1769622722 17388 09710b88d08dfbdb381a994e4f18e9f4 ""
   "capturas/13.png" 1769622754 49810 8f50a857a7e89f3e0aae0edd793c0700 ""
-  "practica5.aux" 1769625770 2958 a0ee83f38d15ebb8e612a5d6a383b8ef "pdflatex"
-  "practica5.tex" 1769625769 9367 6892e3ba046a7dcbc902e19819fea441 ""
-  "practica5.toc" 1769625770 997 30d04faa6946235d049e82e03086c32e "pdflatex"
+  "practica5.aux" 1769626532 2958 a0ee83f38d15ebb8e612a5d6a383b8ef "pdflatex"
+  "practica5.tex" 1769626531 10150 9416547939ae26d6c58ea24a7241823f ""
+  "practica5.toc" 1769626532 997 30d04faa6946235d049e82e03086c32e "pdflatex"
   (generated)
   "practica5.aux"
   "practica5.log"
