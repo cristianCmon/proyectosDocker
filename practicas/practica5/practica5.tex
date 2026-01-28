@@ -56,7 +56,7 @@ controladores web. Para ello, nos ocuparemos de la implementación de cuatro act
     \begin{itemize}
         \item Se creará un bot de Telegram que escuchará ordenes enviadas por los usuarios.
     \end{itemize}
-        \item \textbf{Generación de imágenes aleatorias con Web Controller}\textcolor{RoyalBlue}{\hspace{1em}\textit{1,5 puntos}}
+    \item \textbf{Generación de imágenes aleatorias con Web Controller}\textcolor{RoyalBlue}{\hspace{1em}\textit{1,5 puntos}}
     \begin{itemize}
         \item Se creará un \textit{Web Controller} que reciba parámetros, genere una imagen de píxeles aleatorios y la
         devuelva en Base64 o PNG.
@@ -69,7 +69,95 @@ controladores web. Para ello, nos ocuparemos de la implementación de cuatro act
 
 \section{Actividad 01 – Modificación \textit{EJ07-LigaFutbol}}
 \subsection{Reglas de puntuación especiales}
-\noindent \\01
+\noindent \\Se solicita modificar la lógica de puntuación de los partidos para que, en un partido con 4 o más goles de diferencia, el
+ganador se lleve 7 puntos y al perdedor se le reste 1.\\\\
+Antes de comenzar será necesario modificar el código de las vistas para que el módulo se pueda instalar correctamente en Odoo.
+Deberemos sustituir las etiquetas \textless tree\textgreater por \textless list\textgreater tal como se ve en la siguiente imagen:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{01.png}
+    \caption{Aplicar estos cambios en las 3 vistas}
+\end{figure}
+\newpage
+\noindent \\Una vez instalado el módulo accedemos a él y vemos lo siguiente:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{02.png}
+    \caption{Las 4 vistas del módulo}
+\end{figure}
+\noindent \\\\Tras añadir los 10 primeros equipos de la primera división española nos quedará así:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{03.png}
+\end{figure}
+\newpage
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{04.png}
+    \caption{Podemos simular varios partidos de prueba...}
+\end{figure}
+\noindent \\\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{05.png}
+    \caption{Para ver la puntuación genérica en la clasificación general}
+\end{figure}
+\newpage
+\noindent \\Ahora echémosle un vistazo al código del módulo. Básicamente nos encontramos con 2 modelos, \textit{liga\_partido.py} y \textit{liga\_equipo.py}.
+En este último se calcula la puntuación con un campo computado llamado puntos tal como se ve en la siguiente imagen:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{06.png}
+\end{figure}
+\noindent \\Dada la lógica que queremos implementar para la puntuación vamos a convertir ese campo computado en uno normal, tal que así:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{07.png}
+\end{figure}
+\noindent \\Cambiamos de modelo y nos vamos a \textit{liga\_partido.py} y añadimos el campo creado en el paso anterior dentro de la función
+\textit{actualizoRegistrosEquipo()}:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{08.png}
+\end{figure}
+\newpage
+\noindent \\En la misma función deberemos modificar todo este código...\\\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{09.png}
+    \caption{Código original...}
+\end{figure}
+\noindent \\\\\\Por este otro en el que añadiremos la nueva lógica de puntuación, tal como se muestran en las capturas de la página siguiente:
+\newpage
+\noindent \\\\\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{10.png}
+    \caption{Código para equipo local}
+\end{figure}
+\newpage
+\noindent \\\\\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{11.png}
+    \caption{Código para equipo visitante}
+\end{figure}
+\noindent \\\\\\Es necesario matizar que, según esta lógica, cuando un partido se resuelve con una diferencia de goles igual o superior a 4,
+el equipo perdedor recibirá una puntuación negativa de -1. \underline{Esto quiere decir que puede terminar la temporada con puntuación negativa.}\\\\
+Ahora echemos un vistazo al módulo de Odoo para ver si se han efectuado correctamente las modificaciones. Sobra decir que es
+necesario reiniciar el contenedor para que se apliquen los cambios.
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{12.png}
+    \caption{Crearemos nuevos partidos de prueba}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{13.png}
+    \caption{Comprobamos que el sistema de puntuación se aplica correctamente}
+\end{figure}
 \newpage
 
 \subsection{Botones para alterar los goles de los partidos}
@@ -93,7 +181,22 @@ controladores web. Para ello, nos ocuparemos de la implementación de cuatro act
 \newpage
 
 \section{Actividad 02 – Pruebas \textit{EJ08-API-REST\_Socio}}
-\noindent \\02
+\noindent \\Para la realización de esta actividad he empleado las siguientes herramientas:\\
+\begin{itemize}
+    \item \textit{\textbf{Kdenlive:}} es un potente editor de video no lineal, libre y de código abierto, basado en el framework MLT. 
+    Funciona en Linux, Windows y macOS, permitiendo la edición multipista de audio y video con múltiples efectos, transiciones y 
+    herramientas de corrección de color, ideal tanto para usuarios principiantes como profesionales.
+\end{itemize}
+\begin{itemize}
+    \item \textit{\textbf{Luvvoice:}} es una plataforma de inteligencia artificial diseñada para convertir texto en voz (Text-to-Speech) de forma
+    realista y natural. Es una herramienta muy utilizada por creadores de contenido para narrar videos de YouTube o TikTok, así como
+    por educadores para crear audiolibros o material didáctico.
+\end{itemize}
+\noindent \\El vídeo creado se divide en dos partes bien diferenciadas. En la primera parte se muestra el código de la API donde se puede
+apreciar la url en la que realizar las peticiones y el formato en el que deben enviarse los datos. En la segunda parte se muestran las peticiones
+http (POST, GET, PUT y DELETE) hechas con el programa \textit{\textbf{Postman}}. \\\\
+La duración del vídeo no debe exceder de los 3 minutos (en este caso dura aproximadamente 2 minutos y medio). \\\\
+El archivo \textit{Actividad 2.mp4} está ubicado en la carpeta \textit{practica5} del proyecto.
 \newpage
 
 \section{Actividad 03 – Bot Telegram API REST}

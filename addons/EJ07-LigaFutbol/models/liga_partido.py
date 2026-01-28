@@ -68,19 +68,37 @@ class LigaPartido(models.Model):
             recordEquipo.derrotas=0
             recordEquipo.goles_a_favor=0
             recordEquipo.goles_en_contra=0
+            recordEquipo.puntos=0
             
             for recordPartido in self.env['liga.partido'].search([]):  
         
+                # AÑADIMOS NUEVA VARIABLE PARA SIMPLIFICAR LOS IF
+                goles_de_diferencia = abs(recordPartido.goles_casa - recordPartido.goles_fuera)
+
                 #Si es el equipo de casa
                 if recordPartido.equipo_casa.nombre==recordEquipo.nombre:
                     
                     #Miramos si es victoria o derrota
                     if recordPartido.goles_casa>recordPartido.goles_fuera:
                         recordEquipo.victorias=recordEquipo.victorias+1
+                        # APLICAMOS LA LÓGICA NUEVA (VICTORIAS)
+                        if goles_de_diferencia >= 4:
+                            recordEquipo.puntos += 7
+                        else:
+                            recordEquipo.puntos += 3
+
                     elif recordPartido.goles_casa<recordPartido.goles_fuera:
                         recordEquipo.derrotas=recordEquipo.derrotas+1
+                        # APLICAMOS LA LÓGICA NUEVA (DERROTAS)
+                        if goles_de_diferencia >= 4:
+                            recordEquipo.puntos -= 1
+                        else:
+                            pass
+
                     else:
                         recordEquipo.empates=recordEquipo.empates+1
+                        # AÑADIMOS PUNTUACIÓN ESTÁNDAR EN CASO DE EMPATE
+                        recordEquipo.puntos += 1
                         
                     #Sumamos goles a favor y en contra
                     recordEquipo.goles_a_favor=recordEquipo.goles_a_favor+recordPartido.goles_casa
@@ -92,10 +110,24 @@ class LigaPartido(models.Model):
                     #Miramos si es victoria o derrota
                     if recordPartido.goles_casa<recordPartido.goles_fuera:
                         recordEquipo.victorias=recordEquipo.victorias+1
+                        # APLICAMOS LA LÓGICA NUEVA (VICTORIAS)
+                        if goles_de_diferencia >= 4:
+                            recordEquipo.puntos += 7
+                        else:
+                            recordEquipo.puntos += 3
+
                     elif recordPartido.goles_casa>recordPartido.goles_fuera:
                         recordEquipo.derrotas=recordEquipo.derrotas+1
+                        # APLICAMOS LA LÓGICA NUEVA (DERROTAS)
+                        if goles_de_diferencia >= 4:
+                            recordEquipo.puntos -= 1
+                        else:
+                            pass
+                        
                     else:
                         recordEquipo.empates=recordEquipo.empates+1
+                        # AÑADIMOS PUNTUACIÓN ESTÁNDAR EN CASO DE EMPATE
+                        recordEquipo.puntos += 1
                     
                     #Sumamos goles a favor y en contra
                     recordEquipo.goles_a_favor=recordEquipo.goles_a_favor+recordPartido.goles_fuera

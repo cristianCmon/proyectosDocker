@@ -4,8 +4,8 @@
     <record id='liga_equipo_action' model='ir.actions.act_window'>
         <field name="name">Equipos de la liga</field>
         <field name="res_model">liga.equipo</field>
-        <!-- Indicamos que este modelo se puede ver en kanban, tree y form -->
-        <field name="view_mode">tree,kanban,form,graph</field>
+        <!-- Indicamos que este modelo se puede ver en kanban, list y form -->
+        <field name="view_mode">list,kanban,form,graph</field>
     </record>
 
 
@@ -32,16 +32,16 @@
         </field>
     </record>
 
-    <!-- Tree(list) View -->
-    <record id="liga_equipo_view_tree" model="ir.ui.view">
+    <!-- list(list) View -->
+    <record id="liga_equipo_view_list" model="ir.ui.view">
         <field name="name">Lista de Equipos de la liga</field>
         <field name="model">liga.equipo</field>
         <field name="arch" type="xml">
-            <tree>
+            <list>
                 <field name="nombre" />
                 <field name="escudo" widget="image" class="oe_avatar" />
                 <field name="fecha_fundacion" />
-            </tree>
+            </list>
         </field>
     </record>
 

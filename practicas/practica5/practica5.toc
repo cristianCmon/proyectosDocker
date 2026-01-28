@@ -1,0 +1,12 @@
+\babel@toc {spanish}{}\relax 
+\contentsline {section}{\numberline {1}Introducción}{2}{}%
+\contentsline {section}{\numberline {2}Actividad 01 – Modificación \textit {EJ07-LigaFutbol}}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Reglas de puntuación especiales}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Botones para alterar los goles de los partidos}{11}{}%
+\contentsline {subsection}{\numberline {2.3}Web Controller para eliminar empates}{12}{}%
+\contentsline {subsection}{\numberline {2.4}Informe PDF por cada partido}{13}{}%
+\contentsline {subsection}{\numberline {2.5}Wizard para crear nuevos partidos}{14}{}%
+\contentsline {subsection}{\numberline {2.6}Vista Graph}{15}{}%
+\contentsline {section}{\numberline {3}Actividad 02 – Pruebas \textit {EJ08-API-REST\_Socio}}{16}{}%
+\contentsline {section}{\numberline {4}Actividad 03 – Bot Telegram API REST}{17}{}%
+\contentsline {section}{\numberline {5}Actividad 04 – Generación imágenes aleatorias Web Controller}{18}{}%
