@@ -405,10 +405,22 @@ El archivo \textit{Actividad 2.mp4} está ubicado en la carpeta \textit{practica
 \newpage
 
 \section{Actividad 04 – Generación imágenes aleatorias Web Controller}
-% \subsection{Informe PDF por cada partido}
-% \noindent \\01
-% \newpage
-\noindent \\docker exec -u 0 -it d-odoo /bin/bash
+\noindent \\Se nos pide crear un Web Controller que:
+\begin{itemize}
+    \item Utilice la librería \textbf{Pillow}
+    \item Reciba como parámetros el ancho y alto de una imagen.
+    \item Genere una imagen compuesta por píxeles aleatorios.
+    \item Devuelva la imagen codificada en Base64 o directamente como binario PNG.
+    \item Se recomienda ojear el módulo ``\textit{EJ09-GenerarBarcode}"
+\end{itemize}
+\noindent Como nos indica el enunciado el primer paso que debemos realizar consistirá en instalar
+la librería de Python Pillow. Para ello deberemos acceder a nuestro contenedor de Odoo mediante un
+terminal y, desde ahí, utilizar el sistema de gestión de paquetes de Python \textit{pip} para instalar
+la librería. Como vamos a ojear el módulo del código de barras también instalaremos la librería
+\textbf{python-barcode}. \\
+Empecemos abriendo un terminal en nuestro contenedor Docker.
+
+docker exec -u 0 -it d-odoo /bin/bash
 exit
 
 docker exec	Indica a Docker que quieres ejecutar un nuevo proceso dentro de un contenedor 
