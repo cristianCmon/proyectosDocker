@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.26)  29 JAN 2026 19:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.26)  29 JAN 2026 19:39
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -641,7 +641,7 @@ File: ./capturas/41.png Graphic file (type png)
 Package pdftex.def Info: ./capturas/41.png  used on input line 366.
 (pdftex.def)             Requested size: 455.24411pt x 253.6968pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 359--370
+Underfull \hbox (badness 10000) in paragraph at lines 359--371
 
  []
 
@@ -652,17 +652,17 @@ Underfull \hbox (badness 10000) in paragraph at lines 359--370
 [27]
 
 [28]
-Underfull \hbox (badness 10000) in paragraph at lines 381--382
+Underfull \hbox (badness 10000) in paragraph at lines 382--383
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--397
+Underfull \hbox (badness 10000) in paragraph at lines 393--398
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 392--397
+Underfull \hbox (badness 10000) in paragraph at lines 393--398
 
  []
 
@@ -671,7 +671,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 392--397
 [29]
 
 [30]
-Overfull \hbox (9.17166pt too wide) in paragraph at lines 406--406
+Overfull \hbox (9.17166pt too wide) in paragraph at lines 407--407
 []\OT1/cmr/bx/n/17.28 Actividad 04 { Ge-ne-ra-ci^^Son im^^Sage-nes alea-to-rias Web
  []
 
@@ -695,7 +695,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,368b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\cristianf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on practica5.pdf (32 pages, 1524180 bytes).
+Output written on practica5.pdf (32 pages, 1524778 bytes).
 PDF statistics:
  228 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
