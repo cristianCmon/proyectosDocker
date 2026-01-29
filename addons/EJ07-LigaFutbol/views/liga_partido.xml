@@ -17,20 +17,7 @@
         <field name="model">liga.partido</field>
         <field name="arch" type="xml">
             <form>
-            
-                <header>
-                    <button name="sumar_goles_equipos_locales"
-                        string="+2 goles equipos locales"
-                        type="object"
-                        class="oe_highlight"
-                        confirm="¿Estás seguro de que quieres sumar 2 goles a TODOS los locales?"/>
-                    <button name="sumar_goles_equipos_visitantes"
-                        string="+2 goles equipos visitantes"
-                        type="object"
-                        class="btn-secondary"
-                        confirm="¿Estás seguro de que quieres sumar 2 goles a TODOS los visitantes?"/>
-                </header>
-
+                <button name="%(EJ07-LigaFutbol.action_report_liga_partido)d" string="Generar PDF" type="action" class="btn-primary"/>
                 <group>
                     <group>
                         <field name="equipo_casa" />
@@ -41,7 +28,6 @@
                         <field name="equipo_fuera" />
                         <field name="goles_fuera" />
                     </group>
-
                 </group>
             </form>
         </field>
@@ -53,6 +39,20 @@
         <field name="model">liga.partido</field>
         <field name="arch" type="xml">
             <list>
+                <header>
+                    <button name="sumar_goles_equipos_locales"
+                        string="+2 goles equipos locales"
+                        type="object"
+                        display="always"
+                        class="oe_highlight"
+                        confirm="Esta acción sumará 2 goles a todos los equipos locales, ¿estás seguro/a?"/>
+                    <button name="sumar_goles_equipos_visitantes"
+                        string="+2 goles equipos visitantes"
+                        type="object"
+                        display="always"
+                        class="oe_highlight"
+                        confirm="Esta acción sumará 2 goles a todos los equipos visitantes, ¿estás seguro/a?"/>
+                </header>
                 <!-- Indicamos que atributos usaremos al hacer la vista list -->
                 <field name="equipo_casa" />
                 <field name="goles_casa" />
@@ -71,6 +71,20 @@
         <field name="arch" type="xml">
             <!-- Agrupamos por el atributo "parent_id"-->
             <kanban>
+                <header>
+                    <button name="sumar_goles_equipos_locales"
+                        string="+2 goles equipos locales"
+                        type="object"
+                        display="always"
+                        class="oe_highlight"
+                        confirm="Esta acción sumará 2 goles a todos los equipos locales, ¿estás seguro/a?"/>
+                    <button name="sumar_goles_equipos_visitantes"
+                        string="+2 goles equipos visitantes"
+                        type="object"
+                        display="always"
+                        class="oe_highlight"
+                        confirm="Esta acción sumará 2 goles a todos los equipos visitantes, ¿estás seguro/a?"/>
+                </header>
                 <!-- Indicamos que atributos usaremos al hacer la vista Kanban -->
 
                 <field name="equipo_casa" />

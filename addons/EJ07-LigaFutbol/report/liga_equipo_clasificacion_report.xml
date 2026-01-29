@@ -35,7 +35,9 @@
     </template>
 
     <!-- Realmente, este es el informe, lo de arriba es la plantilla que utilizara el informe -->
-    <report id="report_clasificacion" model="liga.equipo" string="Informe clasificacion de cada equipo" name="EJ07-LigaFutbol.report_clasificacion_view" file="EJ07-LigaFutbol.report_clasificacion_view" report_type="qweb-pdf" />
+    <report id="report_clasificacion" model="liga.equipo" string="Informe clasificacion de cada equipo" 
+    name="EJ07-LigaFutbol.report_clasificacion_view" file="EJ07-LigaFutbol.report_clasificacion_view" 
+    report_type="qweb-pdf" />
 
 
 </odoo>

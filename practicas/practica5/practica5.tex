@@ -161,23 +161,220 @@ necesario reiniciar el contenedor para que se apliquen los cambios.
 \newpage
 
 \subsection{Botones para alterar los goles de los partidos}
-\noindent \\01
+\noindent \\Se nos pide modificar la vista de los partidos para añadir 2 nuevos botones:
+\begin{itemize}
+        \item \textbf{Botón ``+2 goles equipos locales''} Sumará 2 goles a todos los equipos locales.
+        \item \textbf{Botón ``+2 goles equipos visitantes''} Sumará 2 goles a todos los equipos visitantes.
+\end{itemize}
+Tras cada acción la clasificación deberá actualizarse.\\\\
+Lo primero que haremos será añadir 2 funciones de actualización en el modelo correspondiente (\textit{liga\_partido.py}) que posteriormente
+asignaremos a los botones de la vista.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{14.png}
+    \caption{Recorremos array, aplicamos +2 a la propiedad correspondiente y actualizamos}
+\end{figure}
+\newpage
+\noindent \\Ahora toca modificar la vista \textit{liga\_partido.xml} para añadir los nuevos botones. En esta vista hay 2 formas de visualizar
+los datos, una en modo Lista y la otra en modo Kanban (la que está por defecto). Para hacer correctamente la implementación solicitada deberemos
+añadir la nueva botonera en la cabecera de ambas etiquetas, \underline{forzando su visualización} (si no la forzamos deberemos seleccionar 
+obligatoriamene algún partido para que se visualicen los botones), tal como se ve en las siguientes capturas:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{15.png}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{16.png}
+\end{figure}
+\newpage
+\noindent \\Llegados a este punto sólo nos falta comprobar que los cambios se han realizado correctamente. Visualicemos el módulo de Odoo para 
+comprobarlo.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{17.png}
+    \caption{Vista Kanban (por defecto)}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{18.png}
+    \caption{Vista Lista}
+\end{figure}
+\newpage
+\noindent \\Probemos la funcionalidad de los botones:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{19.png}
+    \caption{Añadimos 2 goles a todos los equipos locales en Vista Kanban}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{20.png}
+    \caption{El resultado es satisfactorio}
+\end{figure}
+\newpage
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{21.png}
+    \caption{Añadimos 2 goles a todos los equipos locales en Vista Lista}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{22.png}
+    \caption{El resultado es satisfactorio}
+\end{figure}
+\newpage
+\noindent \\Por último, vayamos a la Vista de Clasificación para comprobar que los datos se han actualizado correctamente.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{23.png}
+    \caption{Actualización realizada satisfactoriamente}
+\end{figure}
 \newpage
 
 \subsection{Web Controller para eliminar empates}
-\noindent \\01
+\noindent \\Se nos solicita crear un Web Controller que elimine todos los partidos que hayan terminado en empate y que devuelva el número
+de partidos eliminados. La url designada para dicha petición será \textit{http://localhost:\textbf{puerto}/eliminarempates} (en este caso,
+debido a la configuración de Docker, \underline{el puerto será el 9001}).\\
+\noindent \\Lo primero que haremos será echar un vistazo a la clase \textit{main.py} ubicada en la carpeta \textit{controllers}. Aquí crearemos 
+una nueva función en la que, al acceder a la url requerida, efectuará la lógica solicitada. Veamos el código:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{24.png}
+    \caption{Web Controller por defecto}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{25.png}
+    \caption{Comprobamos que efectivamente funciona}
+\end{figure}
+\newpage
+\noindent \\Creamos la nueva función solicitada, quedaría tal como se muestra en la siguiente captura:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{26.png}
+\end{figure}
+\noindent \\\\Haremos una prueba que nos debería devolver un resultado negativo ya que nos tenemos almacenados partidos con empate:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{27.png}
+    \caption{Este resultado es correcto}
+\end{figure}
+\newpage
+\noindent \\Como queremos comprobar un resultado positivo crearemos unos empates y volveremos a hacer la petición, tal como se muestra
+en las siguientes imágenes:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{28.png}
+    \caption{Creamos 2 empates de prueba}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{29.png}
+    \caption{Ahora el resultado es el correcto tras la eliminación de empates}
+\end{figure}
+\newpage
+\noindent \\Finalmente vamos a comprobar la clasificación para verificar que las puntuaciones se han actualizado correctamente tras
+los borrados:\\\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{30.png}
+    \caption{Puntuaciones actualizadas satisfactoriamente}
+\end{figure}
+\noindent \\\\No hay duda... este Web Controller funciona a las mil maravillas.
 \newpage
 
 \subsection{Informe PDF por cada partido}
-\noindent \\01
+\noindent \\Se nos pide generar un informe PDF que muestre los datos de un partido. Para ello crearemos una plantilla visual dentro de la 
+carpeta \textit{report} (que está relacionada con la generación de documentos impresos) y un botón dentro de la vista de partidos para que
+el usuario pueda generar el documento.\\\\
+Echémosle un vistazo a la plantilla que ya está creada:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{31.png}
+\end{figure}
+\newpage
+\noindent \\Basándonos en esa plantilla crearemos una nueva desde cero que cumpla con los requisitos solicitados. La llamaremos 
+\textit{liga\_partido\_report.xml} y la ubicaremos dentro de la carpeta \textit{report}. Será necesario enlazarla dentro del 
+archivo \textit{\_\_manifest\_\_.py} del proyecto, tal como se muestra en la siguiente captura:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{32.png}
+\end{figure}
+\noindent \\La creación de la plantilla es problemática ya que \textbf{Odoo 18} y la librería \textbf{wkhtmltopdf}, ya que
+existen ciertas incompatibilidades. Odoo 18 usa Bootstrap 5, que basa casi todo su diseño en Flexbox y CSS Grid. Sin embargo, wkhtmltopdf
+(el motor que genera el PDF) utiliza un motor de renderizado basado en una versión muy antigua de WebKit (similar a un navegador de hace 10 años).
+Por las dificultades de crear una plantilla decente me he visto obligado a generar gran parte de la parte visual con asistencia de la IA.\\
+Veamos por partes cómo ha quedado el código de la plantilla en las siguientes capturas:
+\newpage
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{33.png}
+    \caption{La acción (orden de generar informe) e inicio de la plantilla}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{34.png}
+    \caption{Esta parte mostrará los equipos y el resultado}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{35.png}
+    \caption{Esta parte mostrará los detalles del partido}
+\end{figure}
+\noindent \\Por último falta añadir el botón en la vista \textit{liga\_partido.xml} tal como se ve en la siguiente captura:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{36.png}
+    \caption{Esta será nuestro botón, se llamará \textit{``Generar PDF"}}
+\end{figure}
+\noindent \\Sólo nos falta comprobar si funciona. Cabe recordar que \underline{será necesario reiniciar el contenedor}
+y \underline{actualizar el módulo desde Odoo}. Veamos los resultados en las siguientes capturas:
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{37.png}
+    \caption{Clicamos en un partido}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{38.png}
+    \caption{Clicamos en el nuevo botón}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{39.png}
+    \caption{Tras unos segundos se generará el siguiente archivo PDF}
+\end{figure}
+\newpage
+\noindent \\Si quisiésemos imprimir todos los partidos en un único archivo deberemos cargar la vista Lista, seleccionar todos los partidos y darle a imprimir.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{40.png}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{41.png}
+    \caption{¿El resultado? Un PDF con todos los partidos}
+\end{figure}
+\noindent \\\\Es un quebradero de cabeza muy elevado crear una plantilla decente sino se tienen en cuenta todas las dificultades existentes.
 \newpage
 
 \subsection{Wizard para crear nuevos partidos}
-\noindent \\01
+\noindent \\05
 \newpage
 
 \subsection{Vista Graph}
-\noindent \\01
+\noindent \\06
 \newpage
 
 \section{Actividad 02 – Pruebas \textit{EJ08-API-REST\_Socio}}

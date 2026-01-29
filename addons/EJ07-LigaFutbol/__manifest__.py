@@ -31,6 +31,7 @@
         'views/liga_equipo_clasificacion.xml',
         #Vista a un informe
         'report/liga_equipo_clasificacion_report.xml',
+        'report/liga_partido_report.xml',
         #Aqui vista sobre los partidos
         'views/liga_partido.xml',
         #Añadimos un Wizard para introducir equipos
