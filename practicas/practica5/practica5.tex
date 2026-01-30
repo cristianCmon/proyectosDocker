@@ -413,30 +413,44 @@ El archivo \textit{Actividad 2.mp4} está ubicado en la carpeta \textit{practica
     \item Devuelva la imagen codificada en Base64 o directamente como binario PNG.
     \item Se recomienda ojear el módulo ``\textit{EJ09-GenerarBarcode}"
 \end{itemize}
-\noindent Como nos indica el enunciado el primer paso que debemos realizar consistirá en instalar
-la librería de Python Pillow. Para ello deberemos acceder a nuestro contenedor de Odoo mediante un
-terminal y, desde ahí, utilizar el sistema de gestión de paquetes de Python \textit{pip} para instalar
-la librería. Como vamos a ojear el módulo del código de barras también instalaremos la librería
-\textbf{python-barcode}. \\
-Empecemos abriendo un terminal en nuestro contenedor Docker.
-
-docker exec -u 0 -it d-odoo /bin/bash
-exit
-
-docker exec	Indica a Docker que quieres ejecutar un nuevo proceso dentro de un contenedor 
-que ya está en marcha.
-
--u 0	Define el usuario con el que vas a entrar. El 0 es el ID del usuario root. 
-Esto te da permisos totales de administrador dentro del contenedor.
-
--it		Es la combinación de dos banderas:
-
-	-i (interactive): Mantiene el flujo de entrada abierto.
-
-	-t (tty): Asigna una terminal virtual para que se vea y actúe como una consola normal.
-\textless nombre\_o\_id \textgreater	El identificador único del contenedor donde quieres entrar.
-
-/bin/bash	El programa que quieres ejecutar. En este caso, abres la consola Bash. Si el contenedor es muy ligero (como Alpine), podrías necesitar usar /bin/sh en su lugar.
+\noindent \\Tal como nos recomienda el enunciado vamos a ojear el archivo \textit{generarbarcode.py} dentro de la carpeta
+\textit{controllers} del módulo \textit{EJ09-GenerarBarcode}:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{42.png}
+\end{figure}
+\noindent \\Podemos ver en la ``preparación del entorno" la importación de 2 herramientas clave: \textbf{BytesIO} y \textbf{base64}.
+La primera permite almacenar un archivo en la memoria RAM de forma temporal en vez de en el disco duro del servidor, evitando una posible
+saturación en el supuesto de que cientos o miles de usuarios intenten generar dicho archivo al mismo tiempo. La segunda se encarga de traducir
+los datos binarios de un archivo y convertirlos a una cadena de caracteres seguros, lo cual beneficia su procesado en el lenguaje HTML.
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{43.png}
+\end{figure}
+\noindent \\El código de esta función es bastante autoexplicativo. Primero genera un código de barras, luego lo almacena en un buffer
+temporal, después transforma todo el binario a texto y finalmente lo muestra en formato HTML. \\
+\noindent \\Tomando este código como inspiración vamos a crear un nuevo Web Controller que haga exactamente lo mismo, solo que en vez de 
+generar un código de barras generará la imagen de píxeles aleatorios que nos han solicitado. Por gusto crearé el controlador dentro del 
+módulo \textit{EJ07-LigaFutbol} (ya que ha sido el más utilizado en toda esta práctica) dentro de su respectiva carpeta \textit{controllers}
+(\underline{importante referenciarlo en su respectivo \_\_init\_\_.py}).\\
+El nuevo archivo se llamará \textit{imagen\_aleatoria.py}.
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{44.png}
+\end{figure}
+\noindent \\De forma muy similar al código de ejemplo anterior, importamos las librerías necesarias (en este caso la librerías clave son
+base64, BytesIO y especialmente Pillow) y creamos una función (Web Controller) que genere una imagen, la llene de píxeles aleatorios, la 
+almacene temporalmente en RAM, la traduzca a cadena de caracteres y la muestre por pantalla en la ruta especificada, que en este caso sería
+\textit{http://localhost:9001/imagen/`ancho'/`alto'}, siendo `ancho' y `alto' 2 números enteros.
+\newpage
+\noindent \\A continuación una muestra del funcionamiento del Web Controller. Le diremos al controlador que nos devuelva una imagen de 
+500 píxeles de ancho y 500 píxeles de alto generada con píxeles de colores aleatorios.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{45.png}
+\end{figure}
 \newpage
 
 \end{document}

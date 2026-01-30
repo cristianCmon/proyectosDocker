@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.26)  29 JAN 2026 20:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.26)  30 JAN 2026 11:12
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -675,9 +675,43 @@ Overfull \hbox (9.17166pt too wide) in paragraph at lines 407--407
 []\OT1/cmr/bx/n/17.28 Actividad 04 { Ge-ne-ra-ci^^Son im^^Sage-nes alea-to-rias Web
  []
 
+<./capturas/42.png, id=191, 710.655pt x 270.25969pt>
+File: ./capturas/42.png Graphic file (type png)
+<use ./capturas/42.png>
+Package pdftex.def Info: ./capturas/42.png  used on input line 420.
+(pdftex.def)             Requested size: 455.24411pt x 173.13055pt.
 
 
-[31] (practica5.aux
+[31 <./capturas/42.png>]
+<./capturas/43.png, id=196, 719.68875pt x 636.87938pt>
+File: ./capturas/43.png Graphic file (type png)
+<use ./capturas/43.png>
+Package pdftex.def Info: ./capturas/43.png  used on input line 429.
+(pdftex.def)             Requested size: 455.24411pt x 402.87846pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 431--438
+
+ []
+
+
+
+[32 <./capturas/43.png>]
+<./capturas/44.png, id=201, 654.19406pt x 688.82344pt>
+File: ./capturas/44.png Graphic file (type png)
+<use ./capturas/44.png>
+Package pdftex.def Info: ./capturas/44.png  used on input line 441.
+(pdftex.def)             Requested size: 455.24411pt x 479.34578pt.
+
+
+[33 <./capturas/44.png>]
+<./capturas/45.png, id=206, 438.8897pt x 493.845pt>
+File: ./capturas/45.png Graphic file (type png)
+<use ./capturas/45.png>
+Package pdftex.def Info: ./capturas/45.png  used on input line 452.
+(pdftex.def)             Requested size: 409.71692pt x 461.02686pt.
+
+
+[34 <./capturas/45.png>] (practica5.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -687,17 +721,17 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5343 strings out of 468130
- 93235 string characters out of 5428697
+ 5380 strings out of 468130
+ 94014 string characters out of 5428697
  540930 words of memory out of 5000000
- 33917 multiletter control sequences out of 15000+600000
+ 33954 multiletter control sequences out of 15000+600000
  633702 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,368b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\cristianf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on practica5.pdf (32 pages, 1526520 bytes).
+Output written on practica5.pdf (35 pages, 2431881 bytes).
 PDF statistics:
- 228 PDF objects out of 1000 (max. 8388607)
+ 245 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 206 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 226 words of extra memory for PDF output out of 10000 (max. 10000000)
 
