@@ -32,6 +32,9 @@ class LigaPartido(models.Model):
     )
     #Goles equipo de casa
     goles_fuera= fields.Integer()
+
+    # AÑADIMOS UN NUEVO CAMPO JORNADA
+    jornada = fields.Integer()
     
     #Constraints de atributos
     @api.constrains('equipo_casa')

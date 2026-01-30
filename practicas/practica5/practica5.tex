@@ -371,11 +371,100 @@ actualmente entre Odoo y la herramienta externa \textit{wkhtmltopdf}.
 \newpage
 
 \subsection{Wizard para crear nuevos partidos}
-\noindent \\05
+\noindent \\Se solicita crear un Wizard que permita introducir equipo local, equipo visitante, goles y un nuevo campo jornada. Obviamente
+esto generará un nuevo registro en la tabla liga\_partido de la base de datos. Para crear correctamente el Wizard tendremos que crear un
+modelo y una vista, enlazarlos en el archivo \textit{\_\_init\_\_.py} ubicado en la carpeta \textit{wizard} del proyecto y en el
+\textit{\_\_manifest\_\_.py} en la raíz del proyecto respectivamente, y sin olvidarnos de proporcionar permisos al nuevo modelo creado
+en el archivo \textit{ir.model.access.csv}.\\
+\noindent \\Empecemos por lo más tedioso. Primero crearemos el modelo y la vista únicamente con el esqueleto dentro de la carpeta wizard.
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{46.png}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{47.png}
+\end{figure}
+\noindent \\\\En las siguiente página los enlaces:
 \newpage
-
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{48.png}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{49.png}
+\end{figure}
+\noindent Por último los permisos:
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{50.png}
+\end{figure}
+\newpage
+\noindent Configuración inicial del Wizard completada. Tras comprobar que la pestaña ``Añadir partido'' aparece en nuestro módulo de Odoo podemos
+empezar a escribir el código del modelo.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{51.png}
+\end{figure}
+\noindent \\Es importante que el nombre de los campos de este Wizard coincidan con los nombres de los campos del modelo original, en este caso
+\textit{liga\_partido.py}, en el que tendremos que añadir el nuevo campo jornada.\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{52.png}
+\end{figure}
+\newpage
+\noindent Ahora echemos un vistazo a cómo debe quedar la vista:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{53.png}
+\end{figure}
+\noindent \\Tenemos todo lo necesario para hacer pruebas. Como bien sabemos, toca reiniciar contenedores y actualizar módulos dentro de
+Odoo.\\\\
+En las siguientes capturas observaremos el Wizard en funcionamiento:
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{54.png}
+\end{figure}
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.8\textwidth]{55.png}
+\end{figure}
+\newpage
 \subsection{Vista Graph}
-\noindent \\06
+\noindent \\Se nos solicita implementar una vista gráfica en la vista partidos que muestre estadísticas de los goles marcados por los equipos
+locales. Basándonos en el Graph que ya está creado en la vista \textit{liga\_equipo.xml}, vamos a adaptarlo en la vista \textit{liga\_partido.xml}.\\
+Veamos cómo queda el nuevo código añadido:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{56.png}
+    \caption{Recordad añadir \underline{graph} en el \textit{view\_mode}}
+\end{figure}
+\noindent \\Comprobremos si funciona:\\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.9\textwidth]{57.png}
+    \caption{Aparece la nueva vista Graph, clicamos en ella}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{58.png}
+\end{figure}
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.7\textwidth]{59.png}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{60.png}
+\end{figure}
+\noindent \\Como hemos podido apreciar en las capturas anteriores, los distintos modos de mostrar los datos (gráfica de barras, gráfica de 
+líneas y gráfica circular) funcionan correctamente.\\\\
+La implementación de la vista gráfica en la vista de partidos ha sido satisfactoria.
 \newpage
 
 \section{Actividad 02 – Pruebas \textit{EJ08-API-REST\_Socio}}
@@ -398,10 +487,17 @@ El archivo \textit{Actividad 2.mp4} está ubicado en la carpeta \textit{practica
 \newpage
 
 \section{Actividad 03 – Bot Telegram API REST}
-% \subsection{Informe PDF por cada partido}
-% \noindent \\01
-% \newpage
-\noindent \\03
+\noindent \\Se nos solicita crear un bot de Telegram (configurado con BotFather) que escuche ordenes enviadas por el usuario que apunten a la 
+API REST del módulo ``EJ08-API-REST-Socios''.\\\\
+Las órdenes que debe soportar el bot serán:
+\begin{itemize}
+    \item \textbf{Crear}, nombre=``nombre", apellidos=``apellidos", num\_socio=``numerosocio''
+    \item \textbf{Modificar}, nombre=``nombre'', apellidos=``apellidos'', num\_socio=``numerosocio''
+    \item \textbf{Consultar}, num\_socio=``numerosocio''
+    \item \textbf{Borrar}, num\_socio=``numerosocio''
+\end{itemize}
+\noindent \\Si no recibe ninguna de las órdenes anteriores deberá devolver la respuesta ``Orden no soportada''.
+Lo primero que haremos será descargarnos las librerías necesarias en la máquina real.
 \newpage
 
 \section{Actividad 04 – Generación imágenes aleatorias Web Controller}

@@ -6,7 +6,7 @@
         <!-- Indicamos vistas para este modelo (categoria) -->
         <field name="res_model">liga.partido</field>
         <!-- Indicamos que este modelo se puede ver en kanban, list y form -->
-        <field name="view_mode">kanban,list,form</field>
+        <field name="view_mode">kanban,list,form,graph</field>
     </record>
 
     <menuitem name="Partidos de la liga" id="liga_partido_menu" parent="liga_base_menu" action="liga_partido_action" />
@@ -122,5 +122,18 @@
             </kanban>
         </field>
     </record>
+
+    <!-- Vista Graph  que muestra información usando como base los goles-->
+    <record model="ir.ui.view" id="liga_partido_view_graph">
+        <field name="name">Goles por equipo</field>
+        <field name="model">liga.partido</field>
+        <field name="type">graph</field>
+        <field name="arch" type="xml">
+            <graph string="Goles equipo local">
+                <field name="equipo_casa" group="True" type="row"/>
+                <field name="goles_casa" group="True" type="measure" string="Goles equipo local"/>
+            </graph>
+         </field>
+     </record>
 
 </odoo>

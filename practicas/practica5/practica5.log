@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.26)  30 JAN 2026 11:12
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.9.26)  30 JAN 2026 17:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -648,70 +648,190 @@ Underfull \hbox (badness 10000) in paragraph at lines 359--371
 
 
 [26 <./capturas/40.png> <./capturas/41.png>]
+<./capturas/46.png, id=178, 620.3175pt x 231.86626pt>
+File: ./capturas/46.png Graphic file (type png)
+<use ./capturas/46.png>
+Package pdftex.def Info: ./capturas/46.png  used on input line 382.
+(pdftex.def)             Requested size: 455.24411pt x 170.16313pt.
+<./capturas/47.png, id=179, 771.63281pt x 271.0125pt>
+File: ./capturas/47.png Graphic file (type png)
+<use ./capturas/47.png>
+Package pdftex.def Info: ./capturas/47.png  used on input line 386.
+(pdftex.def)             Requested size: 455.24411pt x 159.88771pt.
 
-[27]
-
-[28]
-Underfull \hbox (badness 10000) in paragraph at lines 382--383
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--398
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 393--398
+Underfull \hbox (badness 10000) in paragraph at lines 374--389
 
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 374--389
 
-[29]
+ []
 
-[30]
-Overfull \hbox (9.17166pt too wide) in paragraph at lines 407--407
+
+
+[27 <./capturas/46.png> <./capturas/47.png>]
+<./capturas/48.png, id=185, 531.48563pt x 230.36063pt>
+File: ./capturas/48.png Graphic file (type png)
+<use ./capturas/48.png>
+Package pdftex.def Info: ./capturas/48.png  used on input line 392.
+(pdftex.def)             Requested size: 455.24411pt x 197.3189pt.
+<./capturas/49.png, id=186, 799.48688pt x 472.76625pt>
+File: ./capturas/49.png Graphic file (type png)
+<use ./capturas/49.png>
+Package pdftex.def Info: ./capturas/49.png  used on input line 396.
+(pdftex.def)             Requested size: 455.24411pt x 269.20543pt.
+<./capturas/50.png, id=187, 840.89156pt x 213.04594pt>
+File: ./capturas/50.png Graphic file (type png)
+<use ./capturas/50.png>
+Package pdftex.def Info: ./capturas/50.png  used on input line 401.
+(pdftex.def)             Requested size: 455.24411pt x 115.33891pt.
+
+
+[28 <./capturas/48.png> <./capturas/49.png> <./capturas/50.png>]
+<./capturas/51.png, id=194, 697.10437pt x 532.99126pt>
+File: ./capturas/51.png Graphic file (type png)
+<use ./capturas/51.png>
+Package pdftex.def Info: ./capturas/51.png  used on input line 408.
+(pdftex.def)             Requested size: 455.24411pt x 348.06677pt.
+<./capturas/52.png, id=195, 314.67563pt x 124.96687pt>
+File: ./capturas/52.png Graphic file (type png)
+<use ./capturas/52.png>
+Package pdftex.def Info: ./capturas/52.png  used on input line 414.
+(pdftex.def)             Requested size: 273.14923pt x 108.48004pt.
+
+
+[29 <./capturas/51.png> <./capturas/52.png>]
+<./capturas/53.png, id=201, 807.015pt x 685.8122pt>
+File: ./capturas/53.png Graphic file (type png)
+<use ./capturas/53.png>
+Package pdftex.def Info: ./capturas/53.png  used on input line 420.
+(pdftex.def)             Requested size: 455.24411pt x 386.87767pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 417--425
+
+ []
+
+
+
+[30 <./capturas/53.png>]
+<./capturas/54.png, id=207, 700.11563pt x 549.55313pt>
+File: ./capturas/54.png Graphic file (type png)
+<use ./capturas/54.png>
+Package pdftex.def Info: ./capturas/54.png  used on input line 428.
+(pdftex.def)             Requested size: 364.19667pt x 285.87828pt.
+<./capturas/55.png, id=208, 703.87968pt x 591.71063pt>
+File: ./capturas/55.png Graphic file (type png)
+<use ./capturas/55.png>
+Package pdftex.def Info: ./capturas/55.png  used on input line 433.
+(pdftex.def)             Requested size: 364.19667pt x 306.1564pt.
+
+
+[31 <./capturas/54.png> <./capturas/55.png>]
+<./capturas/56.png, id=214, 743.77875pt x 243.91125pt>
+File: ./capturas/56.png Graphic file (type png)
+<use ./capturas/56.png>
+Package pdftex.def Info: ./capturas/56.png  used on input line 442.
+(pdftex.def)             Requested size: 409.71692pt x 134.36374pt.
+<./capturas/57.png, id=215, 705.38531pt x 212.29312pt>
+File: ./capturas/57.png Graphic file (type png)
+<use ./capturas/57.png>
+Package pdftex.def Info: ./capturas/57.png  used on input line 448.
+(pdftex.def)             Requested size: 409.71692pt x 123.30826pt.
+
+
+[32 <./capturas/56.png> <./capturas/57.png>]
+<./capturas/58.png, id=221, 707.64375pt x 701.62125pt>
+File: ./capturas/58.png Graphic file (type png)
+<use ./capturas/58.png>
+Package pdftex.def Info: ./capturas/58.png  used on input line 454.
+(pdftex.def)             Requested size: 318.66948pt x 315.96216pt.
+<./capturas/59.png, id=222, 706.13812pt x 702.37407pt>
+File: ./capturas/59.png Graphic file (type png)
+<use ./capturas/59.png>
+Package pdftex.def Info: ./capturas/59.png  used on input line 458.
+(pdftex.def)             Requested size: 318.66948pt x 316.96567pt.
+
+
+[33 <./capturas/58.png> <./capturas/59.png>]
+<./capturas/60.png, id=228, 706.13812pt x 702.37407pt>
+File: ./capturas/60.png Graphic file (type png)
+<use ./capturas/60.png>
+Package pdftex.def Info: ./capturas/60.png  used on input line 463.
+(pdftex.def)             Requested size: 455.24411pt x 452.81882pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 465--468
+
+ []
+
+
+
+[34 <./capturas/60.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 471--472
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 482--487
+
+ []
+
+
+
+[35]
+Underfull \hbox (badness 10000) in paragraph at lines 490--493
+
+ []
+
+
+
+[36]
+Overfull \hbox (9.17166pt too wide) in paragraph at lines 503--503
 []\OT1/cmr/bx/n/17.28 Actividad 04 { Ge-ne-ra-ci^^Son im^^Sage-nes alea-to-rias Web
  []
 
-<./capturas/42.png, id=191, 710.655pt x 270.25969pt>
+<./capturas/42.png, id=240, 710.655pt x 270.25969pt>
 File: ./capturas/42.png Graphic file (type png)
 <use ./capturas/42.png>
-Package pdftex.def Info: ./capturas/42.png  used on input line 420.
+Package pdftex.def Info: ./capturas/42.png  used on input line 516.
 (pdftex.def)             Requested size: 455.24411pt x 173.13055pt.
 
 
-[31 <./capturas/42.png>]
-<./capturas/43.png, id=196, 719.68875pt x 636.87938pt>
+[37 <./capturas/42.png>]
+<./capturas/43.png, id=245, 719.68875pt x 636.87938pt>
 File: ./capturas/43.png Graphic file (type png)
 <use ./capturas/43.png>
-Package pdftex.def Info: ./capturas/43.png  used on input line 429.
+Package pdftex.def Info: ./capturas/43.png  used on input line 525.
 (pdftex.def)             Requested size: 455.24411pt x 402.87846pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 431--438
+Underfull \hbox (badness 10000) in paragraph at lines 527--534
 
  []
 
 
 
-[32 <./capturas/43.png>]
-<./capturas/44.png, id=201, 654.19406pt x 688.82344pt>
+[38 <./capturas/43.png>]
+<./capturas/44.png, id=250, 654.19406pt x 688.82344pt>
 File: ./capturas/44.png Graphic file (type png)
 <use ./capturas/44.png>
-Package pdftex.def Info: ./capturas/44.png  used on input line 441.
+Package pdftex.def Info: ./capturas/44.png  used on input line 537.
 (pdftex.def)             Requested size: 455.24411pt x 479.34578pt.
 
 
-[33 <./capturas/44.png>]
-<./capturas/45.png, id=206, 438.8897pt x 493.845pt>
+[39 <./capturas/44.png>]
+<./capturas/45.png, id=255, 438.8897pt x 493.845pt>
 File: ./capturas/45.png Graphic file (type png)
 <use ./capturas/45.png>
-Package pdftex.def Info: ./capturas/45.png  used on input line 452.
+Package pdftex.def Info: ./capturas/45.png  used on input line 548.
 (pdftex.def)             Requested size: 409.71692pt x 461.02686pt.
 
 
-[34 <./capturas/45.png>] (practica5.aux
+[40 <./capturas/45.png>] (practica5.aux
 LaTeX Info: Redefining \. on input line 9.
 LaTeX Info: Redefining \% on input line 9.
 )
@@ -721,17 +841,17 @@ L3 programming layer <2025-09-02>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5380 strings out of 468130
- 94014 string characters out of 5428697
+ 5516 strings out of 468130
+ 96894 string characters out of 5428697
  540930 words of memory out of 5000000
- 33954 multiletter control sequences out of 15000+600000
+ 34090 multiletter control sequences out of 15000+600000
  633702 words of font info for 62 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,7n,107p,368b,370s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\cristianf\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm1200.pk><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/cristianf/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on practica5.pdf (35 pages, 2431881 bytes).
+Output written on practica5.pdf (41 pages, 2897148 bytes).
 PDF statistics:
- 245 PDF objects out of 1000 (max. 8388607)
+ 296 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 226 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 301 words of extra memory for PDF output out of 10000 (max. 10000000)
 
