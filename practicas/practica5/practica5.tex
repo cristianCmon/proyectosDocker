@@ -5,6 +5,7 @@
 \usepackage[spanish]{babel}
 \usepackage{setspace}
 
+\usepackage{subcaption}
 \usepackage{graphicx}
 \usepackage{geometry}
 \geometry{margin=2.5cm}
@@ -20,7 +21,8 @@
 
 \title{\LARGE \textbf{Práctica 5: Módulos Odoo Controlador, Herencia y Web Controllers.} \\[2ex] \Large Sistemas de Gestión Empresarial}
 \author{\\[20ex]Cristian Fernández}
-\date{\today}
+\date{Sábado, 31 de enero de 2026}
+% \date{\today}
 
 \begin{document}
 \maketitle
@@ -34,7 +36,6 @@
 \section{Introducción}
 \noindent \\El objetivo de esta práctica es aplicar los conocimientos adquiridos sobre vistas, wizards, informes y 
 controladores web. Para ello, nos ocuparemos de la implementación de cuatro actividades que abarcan diferentes contextos:
-
 \begin{itemize}
     \item \textbf{EJ07-LigaFutbol}\textcolor{RoyalBlue}{\hspace{1em}\textit{4 puntos}}
     \begin{itemize}
@@ -59,10 +60,9 @@ controladores web. Para ello, nos ocuparemos de la implementación de cuatro act
     \item \textbf{Generación de imágenes aleatorias con Web Controller}\textcolor{RoyalBlue}{\hspace{1em}\textit{1,5 puntos}}
     \begin{itemize}
         \item Se creará un \textit{Web Controller} que reciba parámetros, genere una imagen de píxeles aleatorios y la
-        devuelva en Base64 o PNG.
+        devuelva en Base64/PNG.
     \end{itemize}
 \end{itemize}
-
 \noindent \\Los ejemplos citados anteriormente se encuentran en el siguiente repositorio.\\
 \textit{https://github.com/sergarb1/OdooModulosEjemplos} \\
 \newpage
@@ -72,7 +72,7 @@ controladores web. Para ello, nos ocuparemos de la implementación de cuatro act
 \noindent \\Se solicita modificar la lógica de puntuación de los partidos para que, en un partido con 4 o más goles de diferencia, el
 ganador se lleve 7 puntos y al perdedor se le reste 1.\\\\
 Antes de comenzar será necesario modificar el código de las vistas para que el módulo se pueda instalar correctamente en Odoo.
-Deberemos sustituir las etiquetas \textless tree\textgreater por \textless list\textgreater tal como se ve en la siguiente imagen:\\
+Deberemos sustituir las etiquetas \textless tree\textgreater{} por \textless list\textgreater{} tal como se ve en la siguiente imagen:\\
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=1\textwidth]{01.png}
@@ -105,7 +105,7 @@ Deberemos sustituir las etiquetas \textless tree\textgreater por \textless list\
 \end{figure}
 \newpage
 \noindent \\Ahora echémosle un vistazo al código del módulo. Básicamente nos encontramos con 2 modelos, \textit{liga\_partido.py} y \textit{liga\_equipo.py}.
-En este último se calcula la puntuación con un campo computado llamado puntos tal como se ve en la siguiente imagen:\\
+En este último se calcula la puntuación con un campo computado llamado puntos, tal como se ve en la siguiente imagen:\\
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=1\textwidth]{06.png}
@@ -259,7 +259,7 @@ una nueva función en la que, al acceder a la url requerida, efectuará la lógi
     \centering
     \includegraphics[width=1\textwidth]{26.png}
 \end{figure}
-\noindent \\\\Haremos una prueba que nos debería devolver un resultado negativo ya que nos tenemos almacenados partidos con empate:\\
+\noindent \\\\Haremos una prueba que nos debería devolver un resultado negativo ya que no tenemos almacenados partidos con empate:\\
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=1\textwidth]{27.png}
@@ -287,12 +287,12 @@ los borrados:\\\\
     \includegraphics[width=1\textwidth]{30.png}
     \caption{Puntuaciones actualizadas satisfactoriamente}
 \end{figure}
-\noindent \\\\No hay duda... este Web Controller funciona a las mil maravillas.
+\noindent \\\\No hay duda... este Web Controller es totalmente operativo.
 \newpage
 
 \subsection{Informe PDF por cada partido}
 \noindent \\Se nos pide generar un informe PDF que muestre los datos de un partido. Para ello crearemos una plantilla visual dentro de la 
-carpeta \textit{report} (que está relacionada con la generación de documentos impresos) y un botón dentro de la vista de partidos para que
+carpeta \textit{report} (que está relacionada con la generación de documentos impresos en Odoo) y un botón dentro de la vista de partidos para que
 el usuario pueda generar el documento.\\\\
 Echémosle un vistazo a la plantilla que ya está creada:
 \begin{figure}[hbt!]
@@ -307,10 +307,10 @@ archivo \textit{\_\_manifest\_\_.py} del proyecto, tal como se muestra en la sig
     \centering
     \includegraphics[width=1\textwidth]{32.png}
 \end{figure}
-\noindent \\La creación de la plantilla es problemática ya que \textbf{Odoo 18} y la librería \textbf{wkhtmltopdf}, ya que
+\noindent \\La creación de la plantilla es problemática entre \textbf{Odoo 18} y la librería \textbf{wkhtmltopdf}, ya que
 existen ciertas incompatibilidades. Odoo 18 usa Bootstrap 5, que basa casi todo su diseño en Flexbox y CSS Grid. Sin embargo, wkhtmltopdf
 (el motor que genera el PDF) utiliza un motor de renderizado basado en una versión muy antigua de WebKit (similar a un navegador de hace 10 años).
-Por las dificultades de crear una plantilla decente me he visto obligado a generar gran parte de la parte visual con asistencia de la IA.\\
+Por las dificultades de crear una plantilla decente me he visto obligado a generar gran parte del código del template con asistencia de IA.\\
 Veamos por partes cómo ha quedado el código de la plantilla en las siguientes capturas:
 \newpage
 \noindent \\
@@ -385,7 +385,7 @@ en el archivo \textit{ir.model.access.csv}.\\
     \centering
     \includegraphics[width=1\textwidth]{47.png}
 \end{figure}
-\noindent \\\\En las siguiente página los enlaces:
+\noindent \\\\En la siguiente página los enlaces:
 \newpage
 \begin{figure}[hbt!]
     \centering
@@ -419,8 +419,7 @@ empezar a escribir el código del modelo.\\
     \centering
     \includegraphics[width=1\textwidth]{53.png}
 \end{figure}
-\noindent \\Tenemos todo lo necesario para hacer pruebas. Como bien sabemos, toca reiniciar contenedores y actualizar módulos dentro de
-Odoo.\\\\
+\noindent \\Tenemos todo lo necesario para hacer pruebas. Como bien sabemos, toca reiniciar contenedores y actualizar módulos dentro de Odoo.\\\\
 En las siguientes capturas observaremos el Wizard en funcionamiento:
 \newpage
 \begin{figure}[hbt!]
@@ -433,6 +432,7 @@ En las siguientes capturas observaremos el Wizard en funcionamiento:
     \includegraphics[width=0.8\textwidth]{55.png}
 \end{figure}
 \newpage
+
 \subsection{Vista Graph}
 \noindent \\Se nos solicita implementar una vista gráfica en la vista partidos que muestre estadísticas de los goles marcados por los equipos
 locales. Basándonos en el Graph que ya está creado en la vista \textit{liga\_equipo.xml}, vamos a adaptarlo en la vista \textit{liga\_partido.xml}.\\
@@ -442,7 +442,7 @@ Veamos cómo queda el nuevo código añadido:\\
     \includegraphics[width=0.9\textwidth]{56.png}
     \caption{Recordad añadir \underline{graph} en el \textit{view\_mode}}
 \end{figure}
-\noindent \\Comprobremos si funciona:\\
+\noindent \\Comprobemos si funciona:\\
 \begin{figure}[hbt!]
     \centering
     \includegraphics[width=0.9\textwidth]{57.png}
@@ -496,8 +496,67 @@ Las órdenes que debe soportar el bot serán:
     \item \textbf{Consultar}, num\_socio=``numerosocio''
     \item \textbf{Borrar}, num\_socio=``numerosocio''
 \end{itemize}
-\noindent \\Si no recibe ninguna de las órdenes anteriores deberá devolver la respuesta ``Orden no soportada''.\\\\
-Lo primero que haremos será descargarnos las librerías necesarias en la máquina real. Estas serán \textit{pip install requests python-telegram-bot python-dotenv}
+\noindent \\Si no recibe ninguna de las órdenes anteriores deberá devolver la respuesta ``\textit{Orden no soportada}''. Como toque personal me 
+permito concatenar ``\textit{ Sólo se admite `Crear', `Modificar', `Consultar' y `Borrar' }''.\\\\
+Lo primero que haremos será descargarnos las librerías necesarias en la máquina real. Estas serán \textit{`pip install requests python-telegram-bot python-dotenv'}.\\\\
+Una vez tengamos correctamente configurado nuestro Python crearemos nuestra aplicación en el archivo \textit{BotTelegram.py}. A continuación las capturas del código:
+\newpage
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{61.png}
+    \caption{Cargamos archivo .env, definimos constantes y creamos la función que hará las peticiones. POST y PUT irán en el cuerpo, GET y DELETE en la propira URL}
+\end{figure}
+\newpage
+\noindent \\
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{62.png}
+    \caption{Creamos función que manejará los mensajes recibidos desde Telegram donde se filtrarán y procesarán adecuadamente. En la última parte del código creamos el objeto
+    que iniciará la aplicación}
+\end{figure}
+\noindent \\Una vez creada la aplicación (\textbf{\underline{esto no es un módulo de Odoo, es una aplicación propia}}) sólo nos falta crear el bot en Telegram. \\\\
+En las siguientes páginas se mostrarán las capturas del proceso de creación:
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{61.jpg}
+    \caption{Tras haber comenzado una conversación con BotFather, clicamos en el botón \textit{`Crear Nuevo Bot'}}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{62.jpg}
+    \caption{Rellenamos el formulario a nuestro gusto y clicamos en el botón \textit{`Crear Nuevo Bot'}}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{63.jpg}
+    \caption{Una vez creado, copiamos el token generado y nos lo llevamos a nuesto proyecto (preferiblemente como variable de entorno)}
+\end{figure}
+\newpage
+\noindent Sólo queda probar que todo funciona correctamente (contenedor Odoo levantado y aplicación iniciada):
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{63.png}
+    \caption{Mandamos peticiones POST desde Telegram}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=0.6\textwidth]{64.png}
+    \caption{Ahora peticiones PUT, GET Y DELETE}
+\end{figure}
+\newpage
+\begin{figure}[hbt!]
+    \centering
+    \includegraphics[width=1\textwidth]{65.png}
+    \caption{Desde la terminal comprobamos que todo concuerda}
+\end{figure}
+\noindent \\\\Las pruebas han sido satisfactorias. \\\\
+Me resulta curioso la forma en la que está diseñado el controlador del API-REST-SOCIOS, ya que permite gestionar los métodos POST y PUT por peticiones en url y body,
+y sin embargo los métodos GET y DELETE sólo permite peticiones por url, lo cual ha sido confuso al empezar a crear la aplicación.
 \newpage
 
 \section{Actividad 04 – Generación imágenes aleatorias Web Controller}
@@ -536,7 +595,7 @@ El nuevo archivo se llamará \textit{imagen\_aleatoria.py}.
     \centering
     \includegraphics[width=1\textwidth]{44.png}
 \end{figure}
-\noindent \\De forma muy similar al código de ejemplo anterior, importamos las librerías necesarias (en este caso la librerías clave son
+\noindent \\De forma muy similar al código de ejemplo anterior, importamos las librerías necesarias (en este caso las librerías clave son
 base64, BytesIO y especialmente Pillow) y creamos una función (Web Controller) que genere una imagen, la llene de píxeles aleatorios, la 
 almacene temporalmente en RAM, la traduzca a cadena de caracteres y la muestre por pantalla en la ruta especificada, que en este caso sería
 \textit{http://localhost:9001/imagen/`ancho'/`alto'}, siendo `ancho' y `alto' 2 números enteros.
